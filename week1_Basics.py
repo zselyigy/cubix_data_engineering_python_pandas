@@ -16,3 +16,8 @@ fullName = 'Jack'
 a = 6
 b = 'Jack'
 print(a, b)
+
+
+basepath = r'.\\Python_DA'
+print(basepath)
+
