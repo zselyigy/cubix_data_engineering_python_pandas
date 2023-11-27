@@ -44,3 +44,17 @@ print(a % b)
 floor_quotient, remainder = divmod(a, b)
 print(floor_quotient)
 print(remainder)
+
+a = 2
+b = 5
+# exponentiation (power function)
+print(a ** b)
+# the same using the pow function
+print(pow(a, b))
+
+a = 64
+b = 2
+# squareroot
+print(a ** (1 / b))
+
+
