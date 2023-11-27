@@ -1,4 +1,4 @@
-a = 'Jack Bauer Jack'
+a = 'Jack Bauer Jack fasdf'
 # convert a string to upper case
 print(a.upper())
 # convert a string to lower case
@@ -28,3 +28,9 @@ s = 'AnacondaAnafdf'
 print(s.find('Ana'))
 print(s.find('ana'))  # in case of it doesn't contain this results -1
 print(s.find('con'))
+
+# check whether the string starts with a substring
+a = 'Jack Bauer'
+print(a.startswith('Jack'))
+print(a.startswith('jack'))
+print(a.endswith('Jack'))
