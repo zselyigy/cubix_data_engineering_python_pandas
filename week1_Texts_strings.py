@@ -108,3 +108,19 @@ txt = ",,,,,rrttgg..d...batnana....rrr"
 x = txt.strip(",.grt")                      # removes all characters in the strip string before and after the first and last non-given character, respectively
 print(x)
 
+text = 'sdjfhajsfh fmsdfes sgskdjksjmsdgfsdkoj;;l fkkdsfl;sd flsdkfl;s\
+sdajhfdjsahjdshre87\n{} t58j jjk kjj odf89j  l k\
+fdshj87akj4k3qwjkhahkasj'.format(57)
+print(text)
+
+missingfile = 'Data.csv'
+text = 'The file \"{}\" is missing from the folder'.format(missingfile)
+print(text)
+
+missingfile = 'Data.csv'
+text = 'The file "{}" is missing from the folder'.format(missingfile)
+print(text)
+
+missingfile = 'Data.csv'
+text = "The file '{}' is missing from the folder".format(missingfile)
+print(text)
