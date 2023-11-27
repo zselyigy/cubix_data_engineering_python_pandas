@@ -81,3 +81,24 @@ print(a, b)         # it adds a space between the multiple variables printed
 # first split our string to a list, then concatenate to one string with out custom separator
 wordlist = d.split()
 print('*-'.join(wordlist))  # one should start with the separator string
+
+# concatenating strings two ways
+a = 'Jack'
+b = 36
+text1 = 'My name is ' + a + ', I am ' + str(b) + ' years old.'
+text2 = 'My name is {}, I am {} years old.'.format(a, b)        # curly brackets could be useful with format functio
+print(text1,'\n',text2)
+
+# formatting the text
+a = 35.567
+# format the floating number to integer by rounding
+text = 'The temperature is {:.0f} degrees.'.format(a)  # the formatting instructions come in the curly brackets after :
+print(text)
+# format the integer number to floating
+a = 19
+text = 'The price is {:.2f} dollars.'.format(a)  # the formatting instructions come in the curly brackets after :
+print(text)
+# format into percent value
+a = 0.5
+text = 'This has {:.1%} probability.'.format(a)
+print(text)
