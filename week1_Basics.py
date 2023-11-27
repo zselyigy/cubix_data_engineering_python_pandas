@@ -57,4 +57,8 @@ b = 2
 # squareroot
 print(a ** (1 / b))
 
-
+weight = 83.5
+# show the types of variables
+print(type(full_name))
+print(type(a))
+print(type(weight))
