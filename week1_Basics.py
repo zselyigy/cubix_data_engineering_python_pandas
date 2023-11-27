@@ -32,3 +32,15 @@ print(os.listdir(basepath + '\\input'))
 current_workingdir = os.getcwd()
 print(current_workingdir)
 
+a = 203
+b = 11
+# normal division
+print(a / b)
+# floor division
+print(a // b)
+# the remainder
+print(a % b)
+# do the same using a function in one step
+floor_quotient, remainder = divmod(a, b)
+print(floor_quotient)
+print(remainder)
