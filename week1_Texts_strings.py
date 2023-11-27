@@ -22,3 +22,9 @@ print(a)
 
 # replace double spcaes to single ones
 print(c.replace('  ', ' '))
+
+s = 'AnacondaAnafdf'
+# starting position of a substring from the left, in case of multiple occurence only the first index appears
+print(s.find('Ana'))
+print(s.find('ana'))  # in case of it doesn't contain this results -1
+print(s.find('con'))
