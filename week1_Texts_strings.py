@@ -102,3 +102,9 @@ print(text)
 a = 0.5
 text = 'This has {:.1%} probability.'.format(a)
 print(text)
+
+
+txt = ",,,,,rrttgg..d...batnana....rrr"
+x = txt.strip(",.grt")                      # removes all characters in the strip string before and after the first and last non-given character, respectively
+print(x)
+
