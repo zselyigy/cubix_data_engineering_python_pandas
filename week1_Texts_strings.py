@@ -10,10 +10,10 @@ b = 'jack Bauer'
 # convert a string to title case
 print(b.title())
 
-b = ' \t aa    bb \f   '
-print(b)
+d = ' \t aa  \t  bb \f   '
+print(d)
 # removes any leading, and trailing whitespaces 
-c = b.strip()
+c = d.strip()
 print()
 
 # replace a part of the strig with a new one, does it for each occurence
@@ -61,3 +61,11 @@ print(substring_start, substring_end)
 sliced_part = mainstring[substring_start : substring_end]
 print(sliced_part)
 print(sz[10 : 5 : -1], len(sz[10 : 5 : -1]))
+
+b = '12-15-20'
+# split the text by a separatos
+print(b.split('-'))
+print(a.split())
+print(d.split())        # all whitespaces handled in groups are removed
+e = '12--15---20'
+print(e.split('-'))     # all separators are handed induvidually
