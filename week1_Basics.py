@@ -21,3 +21,14 @@ print(a, b)
 basepath = r'.\\Python_DA'
 print(basepath)
 
+# import the os module to access the operating system related functions
+import os
+# the file list of the Python_DA folder
+print(os.listdir(basepath))
+# the file list of the Python_DA\input folder
+print(os.listdir(basepath + '\\input'))
+
+# get the current working directory
+current_workingdir = os.getcwd()
+print(current_workingdir)
+
