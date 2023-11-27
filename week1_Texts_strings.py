@@ -69,3 +69,15 @@ print(a.split())
 print(d.split())        # all whitespaces handled in groups are removed
 e = '12--15---20'
 print(e.split('-'))     # all separators are handed induvidually
+
+a = 'Jack'
+b = 'Bauer'
+print(a + ' ' + b)
+a = 'Number of files found: '
+b = 6
+print(a + str(b))   # variable conversion may be needed
+print(a, b)         # it adds a space between the multiple variables printed
+
+# first split our string to a list, then concatenate to one string with out custom separator
+wordlist = d.split()
+print('*-'.join(wordlist))  # one should start with the separator string
