@@ -12,3 +12,7 @@ print(a + b)
 full_name = 'Jack'
 # this is camel case
 fullName = 'Jack'
+
+a = 6
+b = 'Jack'
+print(a, b)
