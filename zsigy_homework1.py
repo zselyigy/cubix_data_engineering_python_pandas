@@ -1,5 +1,9 @@
 # Homework 1 - Week 1
 # Created by István Gy. Zsély
+# version 0.2
+#
+# CHANGE LOG
+# - the modification of the version number to undeline character works with regex sub function instead of a manual replacement
 
 # Tasks:
 # 1.Assign this text to a variable
@@ -17,14 +21,33 @@ to tutorials       and reference materials.'
 # 3.Remove all the unnecessary spaces from the text (full trim).
 mytext_unnecessary_spaces_removed = ' '.join(mytext.split());
 
+
 # 4.Replace all “Python” words to upper case.
 mytext_Python_uppercased = mytext_unnecessary_spaces_removed.replace('Python', 'PYTHON')
 
 # 5.Within version numbers, change points (.) to underscores (_).
-# Sorry, its a manual solution. The version number is not mentioned here as v*, but can be found in general by finding the following pattern: all of them contain "integer.integer" part.
-mytext_version_numbers_underscored = mytext_Python_uppercased.replace('0.9.0', '0_9_0')
-mytext_version_numbers_underscored = mytext_version_numbers_underscored.replace('2.0', '2_0')
-mytext_version_numbers_underscored = mytext_version_numbers_underscored.replace('3.0', '3_0')
+# # Sorry, its a manual solution. The version number is not mentioned here as v*, but can be found in general by finding the following pattern: all of them contain "integer.integer" part.
+# mytext_version_numbers_underscored = mytext_Python_uppercased.replace('0.9.0', '0_9_0')
+# mytext_version_numbers_underscored = mytext_version_numbers_underscored.replace('2.0', '2_0')
+# mytext_version_numbers_underscored = mytext_version_numbers_underscored.replace('3.0', '3_0')
+# mytext_version_numbers_underscored = mytext_Python_uppercased.replace('0.9.0', '0_9_0').replace('2.0', '2_0').replace('3.0', '3_0')
+
+# with the help of ChatGPT I found the solution using regex
+import re
+# Define a regular expression pattern
+pattern = r'\b(\d+)\.(\d+)(?:\.(\d+))?\b'
+
+# Define a function to replace the matched pattern
+def replace(match):
+    if match.group(3):
+        # If there is a third decimal, replace with "decimal_decimal_decimal"
+        return '_'.join(match.groups())
+    else:
+        # If there are only two decimals, replace with "decimal_decimal"
+        return '_'.join(match.groups()[:2])
+
+# Use re.sub() to replace the matched pattern in the text
+mytext_version_numbers_underscored = re.sub(pattern, replace, mytext_Python_uppercased)
 
 # 6.Insert line breaks after the end of each sentence.
 mytext_linebreaks = mytext_version_numbers_underscored.replace('. ', '.\n')   # This way the . to _ transformation can be avoided.
@@ -33,6 +56,7 @@ mytext_linebreaks = mytext_version_numbers_underscored.replace('. ', '.\n')   # 
 print('The cleaned text:\n'+mytext_linebreaks)
 
 # 8.Find the position of the very first release of Python in the text, then use the slicing to write out only that part of the text which contains the name of the first release version and the year.
+# It is not clear if I whould use the original text or the formatted one.
 first_PYHTON_index = mytext_linebreaks.find('first release')
 first_part = mytext_linebreaks[ : first_PYHTON_index]
 revesed_first_part = first_part[ : : -1]
