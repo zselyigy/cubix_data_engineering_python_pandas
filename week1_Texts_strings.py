@@ -124,3 +124,7 @@ print(text)
 missingfile = 'Data.csv'
 text = "The file '{}' is missing from the folder".format(missingfile)
 print(text)
+
+
+text = '1234567890'
+print(text[1:7])
