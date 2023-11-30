@@ -56,4 +56,14 @@ df2.rename(columns = {'Customer': 'Client'}, inplace = True)
 # rename multiple columns
 df2.rename(columns = {'Revenue': 'Sales', 'Salesperson': 'Salesclerk'}, inplace = True)
 
-print(df2)
+# reorder of the columns is only by referencing the column headers
+df = df[['Customer', 'Product', 'Date', 'Revenue', 'Salesperson']]
+# copy of the columns to a new dataframe is similar to this
+df2 = df[['Customer', 'Product', 'Date', 'Revenue']]
+
+# pick the values of a column out (removes it from the original dataframe!)
+column_values = df.pop('Product')
+# insert the values to a dataframe. position, name, values
+df.insert(0, 'Product', column_values)
+
+print(df)
