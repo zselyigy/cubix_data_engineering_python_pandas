@@ -21,5 +21,10 @@ df['Salesperson'] = df['Salesperson'].str.title()
 # print(df['Customer'][0])
 
 # remove the unnecessary spaser from Customer column
-df['Customer'] = df['Customer'].str.replace('\s+',' ', regex=True)
-print(df['Customer'][0])
+df['Customer'] = df['Customer'].str.replace('\s+', ' ', regex = True)
+
+# separate the product name and the date from the Description column
+df[['Product', 'Date']] = df['Description'].str.split(' / ', expand = True)
+# split the date to day, month and year
+df[['Day', 'Month', 'Year']] = df['Date'].str.split('.', expand = True)
+print(df)
