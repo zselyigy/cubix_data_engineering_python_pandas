@@ -11,4 +11,8 @@ outputfile = 'Revenues.csv'
 # read data from a csv file into a dataframe
 df = pd.read_csv(basepath + '\\' + inputfolder + '\\' + inputfile, sep = ';', encoding = 'utf-8')
 # print the number of rows and columns, the total number of cells and the column titles of the dataframe
-print(df.shape, df.size, df.columns)
+# print(df.shape, df.size, df.columns)
+
+# capitalize each word in the Sperson column.
+df['Salesperson'] = df['Salesperson'].str.title()
+print(df)
