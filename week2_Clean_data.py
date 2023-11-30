@@ -15,4 +15,7 @@ df = pd.read_csv(basepath + '\\' + inputfolder + '\\' + inputfile, sep = ';', en
 
 # capitalize each word in the Sperson column.
 df['Salesperson'] = df['Salesperson'].str.title()
-print(df)
+
+# remove the leading and tailing spaces from Customer column
+df['Customer'] = df['Customer'].str.strip(' ')
+print(df['Customer'][0])
