@@ -27,4 +27,14 @@ df['Customer'] = df['Customer'].str.replace('\s+', ' ', regex = True)
 df[['Product', 'Date']] = df['Description'].str.split(' / ', expand = True)
 # split the date to day, month and year
 df[['Day', 'Month', 'Year']] = df['Date'].str.split('.', expand = True)
+# check the data dype of the columns
+# print(df['Date'].dtype)
+# print(df.dtypes)
+# df['Date'] = df['Date'].astype('datetime64[ns]')
+df['Date'] = pd.to_datetime(df['Date'], dayfirst = True)
 print(df)
+
+# conversion of a column to numeric
+# df['xxx'] = pd.to_numeric(df['xxx'], errors = 'coerce')
+# conversion of the data of a column to float
+# df['xxx'] = df['xxx'].astype(dtype = 'float64', errors = 'ignore')
