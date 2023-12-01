@@ -63,7 +63,15 @@ df2 = df[['Customer', 'Product', 'Date', 'Revenue']]
 
 # pick the values of a column out (removes it from the original dataframe!)
 column_values = df.pop('Product')
-# insert the values to a dataframe. position, name, values
+# insert the values to a dataframe.       position, name, values
 df.insert(0, 'Product', column_values)
+
+# add a new, empty column
+df.insert(0, 'Product2', '')
+# adding a new column to the right: just set the value of a non-existing column header
+# extraction of the information from a column of date type
+# Warning: in case of the SettingWithCopyWarning use the following: pd.options.mode.chained_assignment = None
+df['Year'] = df['Date'].dt.year
+df['Month'] = df['Date'].dt.month
 
 print(df)
