@@ -1,0 +1,159 @@
+Product;Customer;Date;Revenue;Salesperson;Year;Month
+HP Printer; Dahlton's;2016-01-02;275;Indiana Jones;2016;1
+200SX Copier; Giant's Ridge Villas;2016-01-11;590;Carrie Bradshaw;2016;1
+HP Printer; Palm Beach Gardens;2016-01-13;275;Michael Corleone;2016;1
+HP Printer; Dahlton's;2016-01-17;275;Indiana Jones;2016;1
+640 Fax Machine; Surry Memorial Hospital;2016-01-22;1035;Forrest Gump;2016;1
+640 Fax Machine; Palm Beach Gardens;2016-01-25;345;Mary Poppins;2016;1
+DeskJet 895Cse; Dahlton's;2016-01-26;230;Luke Skywalker;2016;1
+DeskJet 895Cse; Bloomington Library;2016-01-27;230;Luke Skywalker;2016;1
+640 Fax Machine; Palm Beach Gardens;2016-02-04;690;Mary Poppins;2016;2
+640 Fax Machine; Camdens;2016-02-08;345;Sarah Connor;2016;2
+640 Fax Machine; Camdens;2016-02-08;345;Sarah Connor;2016;2
+Fax Paper; Giant's Ridge Villas;2016-02-12;330;Carrie Bradshaw;2016;2
+HP Printer; City of Chaska;2016-02-12;825;Dana Scully;2016;2
+HP Printer; Palm Beach Gardens;2016-02-12;275;Michael Corleone;2016;2
+HP Printer; Harvey's;2016-02-13;1100;Dana Scully;2016;2
+Fax Paper; Gidget's Gadgets;2016-02-14;330;Carrie Bradshaw;2016;2
+Fax Paper; Buck Hill Ski Resort;2016-02-14;330;Carrie Bradshaw;2016;2
+640 Fax Machine; Electric Beach;2016-02-15;345;Mary Poppins;2016;2
+640 Fax Machine; Camdens;2016-02-17;345;Sarah Connor;2016;2
+HP Printer; Gidget's Gadgets;2016-02-18;275;Carrie Bradshaw;2016;2
+640 Fax Machine; Surry Memorial Hospital;2016-02-19;1035;Forrest Gump;2016;2
+HP Printer; Harvey's;2016-02-24;275;Dana Scully;2016;2
+200SX Copier; Buck Hill Ski Resort;2016-02-25;590;Carrie Bradshaw;2016;2
+640 Fax Machine; Camdens;2016-02-26;345;Sarah Connor;2016;2
+640 Fax Machine; Palm Beach Gardens;2016-02-27;345;James Bond;2016;2
+200SX Copier; Giant's Ridge Villas;2016-03-01;295;Carrie Bradshaw;2016;3
+HP Printer; City of Chaska;2016-03-01;1650;Dana Scully;2016;3
+DeskJet 895Cse; Bloomington Library;2016-03-03;460;Luke Skywalker;2016;3
+HP Printer; Palm Beach Gardens;2016-03-03;275;Michael Corleone;2016;3
+DeskJet 895Cse; Joe's Auto Parts;2016-03-04;690;Luke Skywalker;2016;3
+HP Printer; Harvey's;2016-03-05;1650;Dana Scully;2016;3
+DeskJet 895Cse; ABC Travel ;2016-03-06;460;Jack Bauer;2016;3
+HP Printer; Harvey's;2016-03-07;275;Dana Scully;2016;3
+DeskJet 895Cse; Dahlton's;2016-03-14;460;Luke Skywalker;2016;3
+200SX Copier; Gidget's Gadgets;2016-03-14;590;Carrie Bradshaw;2016;3
+DeskJet 895Cse; Dahlton's;2016-03-20;460;Luke Skywalker;2016;3
+HP Printer; Camdens;2016-03-24;275;Ellen Ripley;2016;3
+640 Fax Machine; Surry Memorial Hospital;2016-03-25;1035;Forrest Gump;2016;3
+640 Fax Machine; Artec;2016-03-27;345;Sarah Connor;2016;3
+200SX Copier; Benson and Kerns;2016-03-28;590;Leia Organa;2016;3
+HP Printer; Dahlton's;2016-04-05;275;Indiana Jones;2016;4
+DeskJet 895Cse; ABC Travel ;2016-04-06;230;Jack Bauer;2016;4
+640 Fax Machine; Artec;2016-04-07;345;Sarah Connor;2016;4
+HP Printer; Bean House ;2016-04-08;275;Tony Stark;2016;4
+Fax Paper; Gidget's Gadgets;2016-04-09;480;Carrie Bradshaw;2016;4
+HP Printer; City of Chaska;2016-04-17;1100;Dana Scully;2016;4
+640 Fax Machine; ABC Travel ;2016-04-17;345;Jack Bauer;2016;4
+200SX Copier; Long Lake Landing;2016-04-18;295;Katniss Everdeen;2016;4
+HP Printer; Bean House ;2016-04-19;275;Tony Stark;2016;4
+HP Printer; Harvey's;2016-04-22;1650;Dana Scully;2016;4
+HP Printer; Harvey's;2016-05-01;1650;Dana Scully;2016;5
+640 Fax Machine; Palm Beach Gardens;2016-05-03;345;James Bond;2016;5
+200SX Copier; Surry Memorial Hospital;2016-05-04;1770;James Bond;2016;5
+640 Fax Machine; Artec;2016-05-05;345;Sarah Connor;2016;5
+640 Fax Machine; Palm Beach Gardens;2016-05-10;345;James Bond;2016;5
+200SX Copier; Surry Memorial Hospital;2016-05-21;885;James Bond;2016;5
+640 Fax Machine; Palm Beach Gardens;2016-05-24;345;James Bond;2016;5
+DeskJet 895Cse; Dahlton's;2016-05-26;460;Luke Skywalker;2016;5
+200SX Copier; Aldrich Hospital ;2016-06-02;1475;James Bond;2016;6
+640 Fax Machine; Camdens;2016-06-03;345;Sarah Connor;2016;6
+Fax Paper; Gidget's Gadgets;2016-06-06;480;Carrie Bradshaw;2016;6
+HP Printer; Bean House ;2016-06-08;275;Tony Stark;2016;6
+640 Fax Machine; Artec;2016-06-09;345;Sarah Connor;2016;6
+DeskJet 895Cse; ABC Travel ;2016-06-09;920;Jack Bauer;2016;6
+DeskJet 895Cse; Dahlton's;2016-06-11;460;Luke Skywalker;2016;6
+DeskJet 895Cse; Joe's Auto Parts;2016-06-13;230;Luke Skywalker;2016;6
+640 Fax Machine; Camdens;2016-06-14;345;Sarah Connor;2016;6
+HP Printer; City of Chaska;2016-06-15;1650;Dana Scully;2016;6
+Fax Paper; Dahlton's;2016-06-16;360;Indiana Jones;2016;6
+640 Fax Machine; Electric Beach;2016-06-21;345;Mary Poppins;2016;6
+HP Printer; Bean House ;2016-06-21;275;Tony Stark;2016;6
+HP Printer; Harvey's;2016-06-22;1650;Dana Scully;2016;6
+DeskJet 895Cse; ABC Travel ;2016-06-22;920;Jack Bauer;2016;6
+HP Printer; Harvey's;2016-06-23;1650;Dana Scully;2016;6
+HP Printer; City of Chaska;2016-06-25;825;Dana Scully;2016;6
+DeskJet 895Cse; Joe's Auto Parts;2016-06-25;460;Luke Skywalker;2016;6
+200SX Copier; Zambito's Zamboni;2016-07-04;590;Forrest Gump;2016;7
+HP Printer; Benson and Kerns;2016-07-05;275;Leia Organa;2016;7
+200SX Copier; Zambito's Zamboni;2016-07-07;295;Forrest Gump;2016;7
+640 Fax Machine; ABC Travel ;2016-07-07;345;Jack Bauer;2016;7
+200SX Copier; Surry Memorial Hospital;2016-07-08;295;Forrest Gump;2016;7
+640 Fax Machine; Surry Memorial Hospital;2016-07-09;1035;Forrest Gump;2016;7
+DeskJet 895Cse; Dahlton's;2016-07-11;460;Luke Skywalker;2016;7
+Fax Paper; Camdens;2016-07-15;330;Katniss Everdeen;2016;7
+640 Fax Machine; Camdens;2016-07-17;345;Sarah Connor;2016;7
+200SX Copier; Carmen Physicians;2016-07-23;295;Hannibal Lecter;2016;7
+640 Fax Machine; Artec;2016-07-24;345;Sarah Connor;2016;7
+Fax Paper; Gidget's Gadgets;2016-07-27;330;Carrie Bradshaw;2016;7
+HP Printer; Bean House ;2016-07-27;550;Tony Stark;2016;7
+200SX Copier; Giant's Ridge Villas;2016-07-28;295;Carrie Bradshaw;2016;7
+200SX Copier; Zambito's Zamboni;2016-07-28;590;Forrest Gump;2016;7
+Fax Paper; Bloomington Library;2016-08-01;360;Luke Skywalker;2016;8
+Fax Paper; Surry Memorial Hospital;2016-08-01;510;James Bond;2016;8
+640 Fax Machine; Artec;2016-08-05;345;Sarah Connor;2016;8
+HP Printer; Bean House ;2016-08-05;275;Tony Stark;2016;8
+200SX Copier; Camdens;2016-08-06;295;Katniss Everdeen;2016;8
+DeskJet 895Cse; Dahlton's;2016-08-10;690;Luke Skywalker;2016;8
+DeskJet 895Cse; Dahlton's;2016-08-10;460;Luke Skywalker;2016;8
+HP Printer; Bean House ;2016-08-10;275;Tony Stark;2016;8
+HP Printer; Bean House ;2016-08-11;275;Tony Stark;2016;8
+HP Printer; City of Chaska;2016-08-13;1650;Dana Scully;2016;8
+200SX Copier; Gidget's Gadgets;2016-08-14;590;Carrie Bradshaw;2016;8
+HP Printer; Bean House ;2016-08-23;275;Tony Stark;2016;8
+640 Fax Machine; Surry Memorial Hospital;2016-08-23;1380;Forrest Gump;2016;8
+HP Printer; Bean House ;2016-08-23;275;Tony Stark;2016;8
+HP Printer; Bean House ;2016-08-27;275;Tony Stark;2016;8
+640 Fax Machine; Palm Beach Gardens;2016-09-05;345;Mary Poppins;2016;9
+HP Printer; Benson and Kerns;2016-09-06;275;Leia Organa;2016;9
+200SX Copier; Surry Memorial Hospital;2016-09-07;2360;James Bond;2016;9
+640 Fax Machine; Palm Beach Gardens;2016-09-07;345;Mary Poppins;2016;9
+640 Fax Machine; Camdens;2016-09-07;345;Sarah Connor;2016;9
+640 Fax Machine; Palm Beach Gardens;2016-09-08;690;James Bond;2016;9
+HP Printer; Gidget's Gadgets;2016-09-11;275;Carrie Bradshaw;2016;9
+640 Fax Machine; Surry Memorial Hospital;2016-09-13;345;James Bond;2016;9
+200SX Copier; Surry Memorial Hospital;2016-09-14;590;James Bond;2016;9
+HP Printer; Benson and Kerns;2016-09-14;275;Leia Organa;2016;9
+DeskJet 895Cse; Dahlton's;2016-09-14;460;Luke Skywalker;2016;9
+640 Fax Machine; Camdens;2016-09-15;345;Sarah Connor;2016;9
+640 Fax Machine; Camdens;2016-09-18;345;Sarah Connor;2016;9
+640 Fax Machine; Palm Beach Gardens;2016-09-19;345;James Bond;2016;9
+640 Fax Machine; Palm Beach Gardens;2016-09-20;345;Mary Poppins;2016;9
+640 Fax Machine; Artec;2016-09-21;345;Sarah Connor;2016;9
+200SX Copier; Aldrich Hospital ;2016-09-22;590;James Bond;2016;9
+Fax Paper; Bloomington Library;2016-09-22;240;Luke Skywalker;2016;9
+DeskJet 895Cse; Dahlton's;2016-09-22;460;Luke Skywalker;2016;9
+640 Fax Machine; ABC Travel ;2016-09-23;1035;Jack Bauer;2016;9
+Fax Paper; ABC Travel ;2016-09-25;240;Jack Bauer;2016;9
+640 Fax Machine; Surry Memorial Hospital;2016-09-27;345;James Bond;2016;9
+640 Fax Machine; Palm Beach Gardens;2016-09-28;345;James Bond;2016;9
+200SX Copier; Camdens;2016-10-03;590;Katniss Everdeen;2016;10
+640 Fax Machine; Surry Memorial Hospital;2016-10-04;690;James Bond;2016;10
+640 Fax Machine; Camdens;2016-10-05;345;Sarah Connor;2016;10
+Fax Paper; Surry Memorial Hospital;2016-10-06;990;James Bond;2016;10
+640 Fax Machine; Dahlton's;2016-10-07;345;Luke Skywalker;2016;10
+640 Fax Machine; Surry Memorial Hospital;2016-10-10;345;James Bond;2016;10
+200SX Copier; Surry Memorial Hospital;2016-10-11;590;James Bond;2016;10
+640 Fax Machine; Palm Beach Gardens;2016-10-11;345;Mary Poppins;2016;10
+640 Fax Machine; Palm Beach Gardens;2016-10-14;345;Mary Poppins;2016;10
+200SX Copier; Surry Memorial Hospital;2016-10-15;590;James Bond;2016;10
+640 Fax Machine; Camdens;2016-10-19;345;Sarah Connor;2016;10
+HP Printer; Bean House ;2016-10-19;275;Tony Stark;2016;10
+HP Printer; Bean House ;2016-10-23;275;Tony Stark;2016;10
+HP Printer; Bean House ;2016-10-28;275;Tony Stark;2016;10
+Fax Paper; Dahlton's;2016-11-01;240;Indiana Jones;2016;11
+640 Fax Machine; Long Lake Landing;2016-11-04;345;Sarah Connor;2016;11
+HP Printer; Benson and Kerns;2016-11-05;275;Leia Organa;2016;11
+Laser Paper; Harvey's;2016-11-10;1750;Dana Scully;2016;11
+Laser Paper; Harvey's;2016-11-11;1750;Dana Scully;2016;11
+HP Printer; Palm Beach Gardens;2016-11-12;275;Mary Poppins;2016;11
+Laser Paper; EPPD;2016-11-13;1750;Dana Scully;2016;11
+200SX Copier; Surry Memorial Hospital;2016-11-16;590;James Bond;2016;11
+DeskJet 895Cse; Dahlton's;2016-11-21;230;Luke Skywalker;2016;11
+DeskJet 895Cse; Dahlton's;2016-11-24;460;Luke Skywalker;2016;11
+DeskJet 895Cse; Dahlton's;2016-11-27;230;Luke Skywalker;2016;11
+640 Fax Machine; ABC Travel ;2016-11-28;345;Jack Bauer;2016;11
+640 Fax Machine; Surry Memorial Hospital;2016-12-01;345;James Bond;2016;12
+Fax Paper; ABC Travel ;2016-12-04;510;Jack Bauer;2016;12
+HP Printer; Benson and Kerns;2016-12-05;275;Leia Organa;2016;12
