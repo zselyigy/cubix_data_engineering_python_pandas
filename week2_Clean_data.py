@@ -74,4 +74,21 @@ df.insert(0, 'Product2', '')
 df['Year'] = df['Date'].dt.year
 df['Month'] = df['Date'].dt.month
 
+# remove the unnecessary Produc2 column
+df = df.drop(['Product2'], axis = 1)
+
+# sort the rows of the dataframe by column
+df = df.sort_values(by = ['Product'])
+# sort in the descending order
+df = df.sort_values(by = ['Product'], ascending = False)
+# sorting for multiple columns, order of the columns matter!
+df = df.sort_values(by = ['Product', 'Customer'])
+
+# before sorting of a column having different types of data a conversion to string may be needed
+# df['Product'] = df['Product'].astype(str)
+
+# sor the data by the Date column
+df = df.sort_values(by = ['Date'])
+
 print(df)
+
