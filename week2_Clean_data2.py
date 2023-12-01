@@ -78,4 +78,7 @@ df = df.sort_values(by = ['Product', 'Customer'])
 # sor the data by the Date column
 df = df.sort_values(by = ['Date'])
 
+# reset the index
+df = df.reset_index(drop = False)
+
 
