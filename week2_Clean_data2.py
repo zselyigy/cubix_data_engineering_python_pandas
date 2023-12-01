@@ -1,3 +1,5 @@
+import pandas as pd
+
 # print the number of rows and columns, the total number of cells and the column titles of the dataframe
 # print(df.shape, df.size, df.columns)
 
@@ -80,5 +82,25 @@ df = df.sort_values(by = ['Date'])
 
 # reset the index
 df = df.reset_index(drop = False)
+
+# cut out a part of the dataframe
+# rows and columns by labels
+#print(df.loc[3:6, 'Customer':'Revenue'])
+# having any empty all row/columns can be sliced out, here for all the rows
+#print(df.loc[ : , 'Customer':'Revenue'])
+# get a single value from the dataframe
+#print(df.loc[4, 'Revenue'])
+
+# filtering the values
+#print(df.loc[ df['Revenue'] > 1700, ['Product', 'Customer', 'Revenue']])
+#print(df.loc[ df['Product'] == 'HP Printer', ['Product', 'Customer', 'Revenue']])
+#print(df.loc[ (df['Product'] == 'HP Printer') & (df['Revenue'] > 1000)])     # in case the list of columns is empty all columns are selected
+
+# get the first 5 rows from the dataset
+print(df.head())
+# get the first X rows from the dataset
+print(df.head(10))
+# get the last 5 rows from the dataset
+print(df.tail())
 
 
