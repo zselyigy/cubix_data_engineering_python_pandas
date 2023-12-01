@@ -90,5 +90,12 @@ df = df.sort_values(by = ['Product', 'Customer'])
 # sor the data by the Date column
 df = df.sort_values(by = ['Date'])
 
-print(df)
+# export the dataframe to a csv file
+# typically, we do not want to put the index numbers in the output file
+df.to_csv(basepath + '\\' + outputfolder + '\\' + outputfile,
+          index = False, sep = ';', encoding = 'utf-8')
+
+# print(df)
+
+print('Data cleaning done!')
 
