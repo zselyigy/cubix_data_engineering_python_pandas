@@ -43,13 +43,11 @@ df['LineTotal'] = df['LineTotal'].str.replace(',', '.')
 df['LineTotal'] = df['LineTotal'].astype(dtype = 'float64', errors = 'ignore')
 
 # Task 7
-# separate the Size from the date to day, month and year
+# separate the Size from the product name
 df[['Product_name', 'Size']] = df['ProductName'].str.split(',', expand = True)
 # replace the 'Black', 'Red' and 'Blue' "sizes" with '-'
-df['Size'] = df['Size'].str.replace('Black', '-')
-df['Size'] = df['Size'].str.replace('Red',   '-')
-df['Size'] = df['Size'].str.replace('Blue',  '-')
-
+pattern = r'\b(?:Black|Red|Blue)\b'
+df['Size'] = df['Size'].str.replace(pattern, '-', regex = True)
 
 # Task 8
 # create a dimension table from column Size
@@ -58,8 +56,9 @@ df_sizes = df[['Size']]
 df_sizes.insert(0, 'ID', df_sizes.index + 1)
 # sort the content in alphabetical order
 df_sizes = df_sizes.sort_values(by = ['Size'])
+# exporting for test purposes only
 # df_sizes.to_csv(basepath + '\\' + outputfolder + '\\' + 'Size.csv',
-#           index = False, sep = ';', encoding = 'utf-8')
+#            index = False, sep = ';', encoding = 'utf-8')
 
 
 # Task 9
