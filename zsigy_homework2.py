@@ -50,8 +50,31 @@ df['Size'] = df['Size'].str.replace('Black', '-')
 df['Size'] = df['Size'].str.replace('Red',   '-')
 df['Size'] = df['Size'].str.replace('Blue',  '-')
 
-print(df.iloc[250 : 280, : ])
-#df['Year'] = df['Date'].dt.year
 
-df['Size'].to_csv(basepath + '\\' + outputfolder + '\\' + 'Size.csv',
-          index = False, sep = ';', encoding = 'utf-8')
+# Task 8
+# create a dimension table from column Size
+df_sizes = df[['Size']]
+# insert the ID column to the first place using the df indexes
+df_sizes.insert(0, 'ID', df_sizes.index + 1)
+# sort the content in alphabetical order
+df_sizes = df_sizes.sort_values(by = ['Size'])
+# df_sizes.to_csv(basepath + '\\' + outputfolder + '\\' + 'Size.csv',
+#           index = False, sep = ';', encoding = 'utf-8')
+
+
+# Task 9
+# sort the df dataframe by “OrderDate” and “Country”
+df = df.sort_values(by = ['OrderDate', 'Country'])
+# reset the index
+df = df.reset_index(drop = False)
+
+# Task 10
+# export the df dataframe to csv using the Export_to_csv.py code
+exec(compile(source=open('Export_to_csv.py').read(), filename='Export_to_csv.py', mode='exec'))
+
+# Task 11
+# Markdown description is in the zsigy_homework2_README.md file.
+
+# Task 12
+# final message to the user
+print('All tasks are finished in week 2 Homework 2.')
