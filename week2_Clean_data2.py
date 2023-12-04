@@ -10,7 +10,7 @@ df['Salesperson'] = df['Salesperson'].str.title()
 # df['Customer'] = df['Customer'].str.strip(' ')
 # print(df['Customer'][0])
 
-# remove the unnecessary spaser from Customer column
+# remove the unnecessary spases from Customer column
 df['Customer'] = df['Customer'].str.replace('\s+', ' ', regex = True)
 
 # separate the product name and the date from the Description column

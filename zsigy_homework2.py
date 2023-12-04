@@ -6,6 +6,7 @@
 # import the pandas data analysis library
 import pandas as pd
 import os
+import re
 
 # file related variables
 basepath = r'.\Python_DA\Homework2'
@@ -33,7 +34,7 @@ df['Class'] = df['Class'].str.strip(' ')
 
 # Task 5
 # covert the type of column 'OederDate" to DATETIME
-df['OrderDate'] = pd.to_datetime(df['OrderDate'], dayfirst = True)
+df['OrderDate'] = pd.to_datetime(df['OrderDate'], dayfirst = False)
 
 # Task 6
 # conversion of the data of column 'LineTotal' to float
@@ -41,8 +42,16 @@ df['OrderDate'] = pd.to_datetime(df['OrderDate'], dayfirst = True)
 df['LineTotal'] = df['LineTotal'].str.replace(',', '.')
 df['LineTotal'] = df['LineTotal'].astype(dtype = 'float64', errors = 'ignore')
 
-print(df)
-print(df['OrderDate'].dtype)
-print(df['LineTotal'].dtype)
-#df['Class'].to_csv(basepath + '\\' + outputfolder + '\\' + 'Class.csv',
-#          index = False, sep = ';', encoding = 'utf-8')
+# Task 7
+# separate the Size from the date to day, month and year
+df[['Product_name', 'Size']] = df['ProductName'].str.split(',', expand = True)
+# replace the 'Black', 'Red' and 'Blue' "sizes" with '-'
+df['Size'] = df['Size'].str.replace('Black', '-')
+df['Size'] = df['Size'].str.replace('Red',   '-')
+df['Size'] = df['Size'].str.replace('Blue',  '-')
+
+print(df.iloc[250 : 280, : ])
+#df['Year'] = df['Date'].dt.year
+
+df['Size'].to_csv(basepath + '\\' + outputfolder + '\\' + 'Size.csv',
+          index = False, sep = ';', encoding = 'utf-8')
