@@ -79,3 +79,26 @@ df_salespersons.insert(0, 'SalespersonID', df_salespersons.index + 1)
 print(df_products)
 print(df_customers)
 print(df_salespersons)
+
+# export the dataframe to a csv file
+# typically, we do not want to put the index numbers in the output file
+df_products.to_csv(basepath + '\\' + outputfolder + '\\' + 'Products.csv',
+          index = False, sep = ';', encoding = 'utf-8')
+df_customers.to_csv(basepath + '\\' + outputfolder + '\\' + 'Customers.csv',
+          index = False, sep = ';', encoding = 'utf-8')
+df_salespersons.to_csv(basepath + '\\' + outputfolder + '\\' + 'Salespersons.csv',
+          index = False, sep = ';', encoding = 'utf-8')
+
+# export the dataframe to an excel file
+df_products.to_excel(basepath + '\\' + outputfolder + '\\' + 'Products.xlsx',
+          index = False, sheet_name= 'Products')
+df_customers.to_excel(basepath + '\\' + outputfolder + '\\' + 'Custormes.xlsx',
+          index = False, sheet_name= 'Customers')
+df_salespersons.to_excel(basepath + '\\' + outputfolder + '\\' + 'Salespersons.xlsx',
+          index = False, sheet_name= 'Salespersons')
+
+# export the dataframe to a multipleexcel file
+with pd.ExcelWriter(basepath + '\\' + outputfolder + '\\' + 'Dimension_tables.xlsx') as writer:
+    df_products.to_excel(writer, index = False, sheet_name= 'Products')
+    df_customers.to_excel(writer, index = False, sheet_name= 'Customers')
+    df_salespersons.to_excel(writer, index = False, sheet_name= 'Salespersons')
