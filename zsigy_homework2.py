@@ -6,7 +6,6 @@
 # import the pandas data analysis library
 import pandas as pd
 import os
-import re
 
 # file related variables
 basepath = r'.\Python_DA\Homework2'
