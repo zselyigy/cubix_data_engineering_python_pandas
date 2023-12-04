@@ -102,3 +102,16 @@ with pd.ExcelWriter(basepath + '\\' + outputfolder + '\\' + 'Dimension_tables.xl
     df_products.to_excel(writer, index = False, sheet_name= 'Products')
     df_customers.to_excel(writer, index = False, sheet_name= 'Customers')
     df_salespersons.to_excel(writer, index = False, sheet_name= 'Salespersons')
+
+
+# create the Excel table of the original data and add new sheets to this file
+df = df.sort_values(by= ['Date'])
+df.to_excel(basepath + '\\' + outputfolder + '\\' + 'All_tables.xlsx',
+          index = False, sheet_name= 'Revenues')
+
+# add new sheets to an existing Excel file
+with pd.ExcelWriter(basepath + '\\' + outputfolder + '\\' + 'All_tables.xlsx',
+                    engine= 'openpyxl', mode= 'a') as writer:
+    df_products.to_excel(writer, index = False, sheet_name= 'Products')
+    df_customers.to_excel(writer, index = False, sheet_name= 'Customers')
+    df_salespersons.to_excel(writer, index = False, sheet_name= 'Salespersons')
