@@ -18,6 +18,8 @@ exec(compile(source=open('week2_Clean_data2.py').read(), filename='week2_Clean_d
 
 # reduce the dataframe to a specific column
 df_products = df[['Product']]
+# sort the content in alphabetical order
+df_products = df_products.sort_values(by = ['Product'])
 # remove the duplicated
 df_products = df_products.drop_duplicates()
 
@@ -33,4 +35,47 @@ df_products = df_products.reset_index(drop = True)
 # insert an ID column
 df_products.insert(0, 'ProductID', df_products.index + 1)
 
+
+# the same for the Customers and the Salesperson
+
+# reduce the dataframe to a specific column
+df_customers = df[['Customer']]
+# sort the content in alphabetical order
+df_customers = df_customers.sort_values(by = ['Customer'])
+# remove the duplicated
+df_customers = df_customers.drop_duplicates()
+
+# # another possibility
+# # remove the fuplicated regarding a given column using the subset paramter
+# df_customers2 = df.drop_duplicates(subset= ['Customer'])
+# # reduce the dataframe to a specific column
+# df_customers2 = df_customers2[['Customer']]
+
+# drop the old indexes, but introduce new ones
+df_customers = df_customers.reset_index(drop = True)
+
+# insert an ID column
+df_customers.insert(0, 'CustomerID', df_customers.index + 1)
+
+# reduce the dataframe to a specific column
+df_salespersons = df[['Salesperson']]
+# sort the content in alphabetical order
+df_salespersons = df_salespersons.sort_values(by = ['Salesperson'])
+# remove the duplicated
+df_salespersons = df_salespersons.drop_duplicates()
+
+# # another possibility
+# # remove the fuplicated regarding a given column using the subset paramter
+# df_salespersons2 = df.drop_duplicates(subset= ['Salesperson'])
+# # reduce the dataframe to a specific column
+# df_salespersons2 = df_salespersons2[['Salesperson']]
+
+# drop the old indexes, but introduce new ones
+df_salespersons = df_salespersons.reset_index(drop = True)
+
+# insert an ID column
+df_salespersons.insert(0, 'SalespersonID', df_salespersons.index + 1)
+
 print(df_products)
+print(df_customers)
+print(df_salespersons)
