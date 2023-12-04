@@ -97,10 +97,27 @@ df = df.reset_index(drop = False)
 #print(df.loc[ (df['Product'] == 'HP Printer') & (df['Revenue'] > 1000)])     # in case the list of columns is empty all columns are selected
 
 # get the first 5 rows from the dataset
-print(df.head())
+#print(df.head())
 # get the first X rows from the dataset
-print(df.head(10))
+#print(df.head(10))
 # get the last 5 rows from the dataset
-print(df.tail())
+#print(df.tail())
 
+# slicing with index numbers, row column, end indexes are not included (as usual)
+#print(df.iloc[3:6, 0:3])
+# last rows can be accessed via negative numbers
+# print the last three rows and the second column
+#print(df.iloc[-3:, 1])
+# last rows, column selected by column label
+#print(df.iloc[-3:, df.columns.get_loc('Customer')])
+# last columns in row by column index
+#print(df.iloc[2, -3:])
+# taking a given element of the dataframe
+#print(df)
+#print(df.iloc[4,3])
+# filter by value, the content of the columns should be converted to index values using the .value procedure
+#print(df.iloc[(df['Revenue'] > 1700).values, [0, 1, 3]])
 
+# getting the number of rows and columns from the shape of the dataframe
+print('Number of rows: ',df.shape[0])
+print('Number of columns: ',df.shape[1])
