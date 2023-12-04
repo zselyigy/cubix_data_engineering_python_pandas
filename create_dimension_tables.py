@@ -21,11 +21,16 @@ df_products = df[['Product']]
 # remove the duplicated
 df_products = df_products.drop_duplicates()
 
-# another possibility
-# remove the fuplicated regarding a given column using the subset paramter
-df_products2 = df.drop_duplicates(subset= ['Product'])
-# reduce the dataframe to a specific column
-df_products2 = df_products2[['Product']]
+# # another possibility
+# # remove the fuplicated regarding a given column using the subset paramter
+# df_products2 = df.drop_duplicates(subset= ['Product'])
+# # reduce the dataframe to a specific column
+# df_products2 = df_products2[['Product']]
 
+# drop the old indexes, but introduce new ones
+df_products = df_products.reset_index(drop = True)
+
+# insert an ID column
+df_products.insert(0, 'ProductID', df_products.index + 1)
 
 print(df_products)
