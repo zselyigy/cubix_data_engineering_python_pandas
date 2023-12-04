@@ -51,13 +51,17 @@ df['Size'] = df['Size'].str.replace(pattern, '-', regex = True)
 # Task 8
 # create a dimension table from column Size
 df_sizes = df[['Size']]
-# insert the ID column to the first place using the df indexes
-df_sizes.insert(0, 'ID', df_sizes.index + 1)
 # sort the content in alphabetical order
 df_sizes = df_sizes.sort_values(by = ['Size'])
+# reset the index
+df_sizes = df_sizes.reset_index(drop = True)
+# insert the ID column to the first place using the df indexes
+df_sizes.insert(0, 'SizeID', df_sizes.index + 1)
 # exporting for test purposes only
 # df_sizes.to_csv(basepath + '\\' + outputfolder + '\\' + 'Size.csv',
-#            index = False, sep = ';', encoding = 'utf-8')
+#             index = False, sep = ';', encoding = 'utf-8')
+# write it out in terminal
+print(df_sizes)
 
 
 # Task 9
