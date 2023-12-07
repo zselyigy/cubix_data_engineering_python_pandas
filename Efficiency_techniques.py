@@ -45,3 +45,11 @@ except:
 
 # remove a folder with all files in
 shutil.rmtree(basepath + '\\' + subfolder, ignore_errors = True)
+
+# remove file (in case it is not open)
+outputfolder = 'Output'
+try:
+    os.remove(basepath + '\\' + outputfolder + '\\' + 'To_be_deleted.txt')
+    print('To_be_deleted.txt deleted.')
+except:
+    print('Removal of To_be_deleted.txt failed.')
