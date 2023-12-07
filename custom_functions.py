@@ -39,4 +39,16 @@ pythagoras = lambda a, b : (a ** 2 + b ** 2) ** (1 / 2)
 print(reversed_name_lambda('Kiss Pista'))
 print(pythagoras(3, 4))
 
+# pythagoras with rpunding
+pythagoras2 = lambda a, b : round((a ** 2 + b ** 2) ** (1 / 2), 2)
+print(pythagoras2(13, 15))
+
+import math
+# math.floor rounds down
+pythagoras3 = lambda a, b : math.floor((a ** 2 + b ** 2) ** (1 / 2))
+print(pythagoras3(13, 15))
+# math.ceil rounds up
+pythagoras3 = lambda a, b : math.ceil((a ** 2 + b ** 2) ** (1 / 2))
+print(pythagoras3(13, 15))
+
 
