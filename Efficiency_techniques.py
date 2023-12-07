@@ -7,7 +7,7 @@ print(birth_date.strftime('%Y'))    # year full
 print(birth_date.strftime('%m'))    # month number
 print(birth_date.strftime('%B'))    # month full name
 print(birth_date.strftime('%d'))    # day as number (1-31)
-print(birth_date.strftime('%A'))    # day full name
+print(birth_date.strftime('%A'))    # day full name34
 print(birth_date.strftime('%w'))    # weekday as a number (0-6), 0 is SUnday
 
 today_date = dt.datetime.now()
@@ -20,3 +20,9 @@ try:
     print('The quotient is ' + str(a / b))
 except:
     print('We cannot divide by zero!')
+
+n = input('Type a number: ')
+try:
+    print('The number squared: ', float(n) ** 2)
+except:
+    print('Type a NUMBER, not a text!')
