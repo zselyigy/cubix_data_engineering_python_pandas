@@ -30,3 +30,13 @@ winsound.Beep(frequency, duration)
 endtime = time.time()
 # print runtime
 print(runtime(starttime, endtime))
+
+# define functions with the LAMBDA format
+reversed_name_lambda = lambda text : text[text.find(' ') + 1 : ] + ' ' + text[ : text.find(' ')]
+pythagoras = lambda a, b : (a ** 2 + b ** 2) ** (1 / 2)
+
+# use them:
+print(reversed_name_lambda('Kiss Pista'))
+print(pythagoras(3, 4))
+
+
