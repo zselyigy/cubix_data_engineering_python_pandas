@@ -1,6 +1,6 @@
 # Homework 2 - Week 2
 # Created by István Gy. Zsély
-# version 0.1
+# version 0.2
 # For details look in the README.md file.
 
 # import the pandas data analysis library
@@ -43,10 +43,15 @@ df['LineTotal'] = df['LineTotal'].astype(dtype = 'float64', errors = 'ignore')
 
 # Task 7
 # separate the Size from the product name
-df[['Product_name', 'Size']] = df['ProductName'].str.split(',', expand = True)
+df[['Product_name', 'Size']] = df['ProductName'].str.split(', ', expand = True)
+# we do not need the original, uncleaned ProductName column
+df = df.drop(['ProductName'], axis = 1)
 # replace the 'Black', 'Red' and 'Blue' "sizes" with '-'
 pattern = r'\b(?:Black|Red|Blue)\b'
 df['Size'] = df['Size'].str.replace(pattern, '-', regex = True)
+# same with list:
+# colorlist = ['Black', 'Blue', 'Red']
+# df['Size'] = df['Size'].replace(colorlist, '-')
 
 # Task 8
 # create a dimension table from column Size

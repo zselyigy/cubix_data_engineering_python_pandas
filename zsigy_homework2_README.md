@@ -1,12 +1,16 @@
 # Homework 2 - Week 2
-Created by István Gy. Zsély, version 0.1
+Created by István Gy. Zsély, version 0.2
+
+# CHANGE LOG
+- The uncleaned ProductName column removed.
+- The unecessary spaced from the Sie column removed.
 
 # Project overview
 This code was created during my participation in the [CUBIX Data Engineering course](https://courses.cubixedu.com/kepzes/data-engineer-23q4).
 
 The aim is to demonstrate the knowledge about the basic features of the [Python pandas library](https://pandas.pydata.org/).
 
-The following tasks are done by the program, denoted in comments in the source code:
+The following tasks are performed by the program, denoted in comments in the source code:
 
 1. The input folder: “Input”, the input file: “Orders_2011.csv” inside it.
 2. The output folder should be the “Output” folder.
