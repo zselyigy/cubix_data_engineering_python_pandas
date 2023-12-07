@@ -53,3 +53,9 @@ try:
     print('To_be_deleted.txt deleted.')
 except:
     print('Removal of To_be_deleted.txt failed.')
+
+import winsound   # this is the module of windows sounds
+# beep
+frequency = 440  # in Hz
+duration = 500  # in ms
+winsound.Beep(frequency, duration)
