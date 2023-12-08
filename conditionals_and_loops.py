@@ -64,3 +64,15 @@ if a.endswith('Jack'):
     print('Ends with it.')
 else:
     print('Does not end with it.')
+
+v = True
+if v:
+    print('v is True.')
+else:
+    print('v is False.')
+
+v = True
+if not v:
+    print('v is False.')
+else:
+    print('v is True.')
