@@ -1,0 +1,32 @@
+index;Product;Customer;Date;Revenue;Salesperson;Year;Month
+2;Fax Paper; Adam's Surplus;2017-01-06;240;Mary Poppins;2017;1
+13;HP Printer; City of Chaska;2017-01-06;1650;Dana Scully;2017;1
+5;HP Printer; Buck Hill Ski Resort;2017-01-07;275;Carrie Bradshaw;2017;1
+14;HP Printer; City of Chaska;2017-01-07;825;Dana Scully;2017;1
+11;Laser Paper; Camdens;2017-01-08;350;Leia Organa;2017;1
+10;HP Printer; Camdens;2017-01-11;275;Katniss Everdeen;2017;1
+4;HP Printer; Benson and Kerns;2017-01-12;275;Leia Organa;2017;1
+16;DeskJet 895Cse; Dahlton's;2017-01-13;460;Luke Skywalker;2017;1
+15;HP Printer; City of Chaska;2017-01-19;825;Dana Scully;2017;1
+8;640 Fax Machine; Camdens;2017-01-21;345;Sarah Connor;2017;1
+9;640 Fax Machine; Camdens;2017-01-22;345;Sarah Connor;2017;1
+12;HP Printer; City of Chaska;2017-01-22;1650;Dana Scully;2017;1
+1;Fax Paper; ABC Travel ;2017-01-24;240;Jack Bauer;2017;1
+6;640 Fax Machine; Camdens;2017-01-26;345;Sarah Connor;2017;1
+3;HP Printer; Benson and Kerns;2017-01-27;275;Leia Organa;2017;1
+0;DeskJet 895Cse; ABC Travel ;2017-01-27;230;Jack Bauer;2017;1
+7;640 Fax Machine; Camdens;2017-01-28;345;Sarah Connor;2017;1
+19;640 Fax Machine; Electric Beach;2017-02-01;345;Mary Poppins;2017;2
+30;200SX Copier; Zambito's Zamboni;2017-02-01;590;Forrest Gump;2017;2
+20;Cannon Printer; EPPD;2017-02-03;220;Dana Scully;2017;2
+22;HP Printer; Giant's Ridge Villas;2017-02-09;275;Carrie Bradshaw;2017;2
+29;200SX Copier; Zambito's Zamboni;2017-02-10;295;Forrest Gump;2017;2
+28;640 Fax Machine; Surry Memorial Hospital;2017-02-10;345;James Bond;2017;2
+18;DeskJet 895Cse; Dahlton's;2017-02-14;690;Luke Skywalker;2017;2
+17;DeskJet 895Cse; Dahlton's;2017-02-17;230;Luke Skywalker;2017;2
+21;MW Copier; EPPD;2017-02-17;220;Dana Scully;2017;2
+24;HP Scanner; Harvey's;2017-02-21;1760;Dana Scully;2017;2
+26;MW Copier; Mike's Sport Shop;2017-02-23;220;Dana Scully;2017;2
+27;640 Fax Machine; Surry Memorial Hospital;2017-02-24;345;James Bond;2017;2
+23;HP Printer; Gidget's Gadgets;2017-02-25;275;Carrie Bradshaw;2017;2
+25;HP Printer; Long Lake Landing;2017-02-25;275;Katniss Everdeen;2017;2
