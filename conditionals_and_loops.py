@@ -86,3 +86,27 @@ print(' ')
 # loop throught the even numbers from 4 to 10
 for i in range(4, 11, 2):
     print(i)
+
+
+# the WHILE loop
+i = 1
+# repeat the instruction while i <= 5
+while i <= 5:
+    if i % 2 == 0:
+        print(str(i) + ' even')
+    else:
+        print(str(i) + ' odd')
+    i += 1
+
+
+# read a number
+valid = False
+while not valid:
+    n = input('Type a number: ')   # it provides a string all the time
+    try:
+        n_numeric = float(n)
+        valid = True
+    except:
+        print('Type a NUMBER, not a text!')
+
+print('The number squared: ', n_numeric ** 2)
