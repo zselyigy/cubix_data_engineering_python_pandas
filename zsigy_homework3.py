@@ -38,6 +38,7 @@ def is_divisible(number, divisor):
     return number % divisor == 0
 
 # Task 5
+# create the lists of even and divisible by 3 numbers, respectively
 list_of_even_numbers = []
 list_of_divisible_by_three = []
 for i in range(1, int_number + 1):
