@@ -32,3 +32,35 @@ a = 6
 b = 8
 print('They are equal') if a == b else print('They are NOT equal')
 
+
+# application of IF in conjuction with a text search
+# print a message if the text contains a substring
+a = 'Jack Bauer'
+if a.find('Jfack') >=0:
+    print('Contains.')
+else:
+    print('Does not contain.')
+
+# a simpler way:
+if 'Jack' in a:
+    print('Contains.')
+else:
+    print('Does not contain.')
+
+# make it case insensitive
+if 'jack' in a.lower():
+    print('Contains.')
+else:
+    print('Does not contain.')
+
+# if the text starts with a substring:
+if a.startswith('Jack'):
+    print('Starts with it.')
+else:
+    print('Does not start with it.')
+
+# if the text ends with a substring:
+if a.endswith('Jack'):
+    print('Ends with it.')
+else:
+    print('Does not end with it.')
