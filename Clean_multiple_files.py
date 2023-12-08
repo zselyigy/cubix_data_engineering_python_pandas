@@ -40,6 +40,9 @@ df = pd.concat(df_list)
 exec(compile(source=open('week2_Clean_data2.py').read(), filename='week2_Clean_data2.py', mode='exec'))
 exec(compile(source=open('Write_csv.py').read(), filename='Write_csv.py', mode='exec'))
 
+# create the dimension tables, too
+exec(compile(source=open('create_dimension_tables_callable.py').read(), filename='create_dimension_tables_callable.py', mode='exec'))
+
 
 # beep
 frequency = 440  # in Hz
