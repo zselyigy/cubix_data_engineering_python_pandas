@@ -33,12 +33,9 @@ while not valid:    # continously asks for input until all three conditions fulf
         print('Type a NUMBER, not a text!')
 
 # Task 4 custom function for testing the divisibility of a number by a divisor
+# it returns True if divisible, otherwise False
 def is_divisible(number, divisor):
-    if number % divisor == 0:
-        d = True
-    else:
-        d = False
-    return d
+    return number % divisor == 0
 
 # Task 5
 list_of_even_numbers = []
