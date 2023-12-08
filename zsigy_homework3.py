@@ -3,9 +3,7 @@
 # version 0.1
 # For details look in the README.md file.
 
-# import the pandas data analysis library
 import winsound, time
-
 
 # define a function for the calculation of runtime in a string with a specific format
 def runtime(start, end):
@@ -17,7 +15,7 @@ def runtime(start, end):
 starttime = time.time()
 
 # Tasks 1 to 3
-# Read an integer number between 1 and 30
+# read an integer number between 1 and 30
 valid = False
 while not valid:    # continously asks for input until all three conditions fulfilled
     n = input('Type an integernumber between 1 and 30: ')   # Task 1
@@ -34,7 +32,7 @@ while not valid:    # continously asks for input until all three conditions fulf
     except:
         print('Type a NUMBER, not a text!')
 
-# Task 4 Custom function for testing the divisibility of a number by a divisor
+# Task 4 custom function for testing the divisibility of a number by a divisor
 def is_divisible(number, divisor):
     if number % divisor == 0:
         d = True
