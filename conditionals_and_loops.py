@@ -21,7 +21,7 @@ a = 6
 # if a even
 if a % 2 == 0:
     print('Can be divided by 2')
-elif a % 3 == 0:
+elif a % 3 == 0:   # if a cam be divided by 3
     print('Cannot be divided by 2, but can be divided by 3')
 else:
     print('Cannot be divided by either 2 or 3')
@@ -76,3 +76,13 @@ if not v:
     print('v is False.')
 else:
     print('v is True.')
+
+# the FOR loop
+for i in range(5):   # range starts from 0 to the value before the number
+    print(i)
+
+print(' ')
+
+# loop throught the even numbers from 4 to 10
+for i in range(4, 11, 2):
+    print(i)
