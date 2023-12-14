@@ -50,3 +50,13 @@ if a in names:
     print('It is in the list.')
 else:
     print('It is not in the list.')
+
+# splitting text to a list
+a = '10/March/2020'
+print(a.split('/'))
+
+a = '    asa    b      '
+print(a.split())   # having an empty call of .split it assumes WHITESPACESE and ignores the empty list elements / handles multiple WHITESPACES as ones
+
+a = 'Jill SUsan Smith'
+print(a.split()[0])
