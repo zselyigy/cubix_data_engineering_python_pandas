@@ -29,3 +29,13 @@ names1 = ['Jack', 'Jill', 'Robert', 'Susan']
 names2 = ['Jack', 'Jill', 'Robert', 'Susan']
 names3 = names1 + names2
 print(names3)
+
+# loosp through the elements of the list
+names = ['Jack', 'Jill', 'Robert', 'Susan']
+for name in names:
+    print(name)
+
+# loosp through the elements of the list having the indexes during the process
+names = ['Jack', 'Jill', 'Robert', 'Susan']
+for i in range(len(names)):
+    print(str(i) + ' ' + names[i])
