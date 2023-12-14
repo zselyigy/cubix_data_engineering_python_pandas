@@ -79,3 +79,11 @@ print(new_itemlist[1] == new_itemlist[1], new_itemlist[2] == new_itemlist[2])
 # remove the NaN items from the list
 itemlist = [x for x in new_itemlist if x == x]
 print(itemlist)
+
+# find difference between lists
+def listdiff(list1, list2):
+    return [i for i in list1 + list2 if (i not in list1) or (i not in list2)]
+
+names1 = ['Jack', 'Jill', 'Robert', 'Susan']
+names2 = ['Joan', 'Roberto', 'Jack', 'Susan']
+print(listdiff(names1, names2))
