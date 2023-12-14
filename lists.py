@@ -68,3 +68,14 @@ print('-'.join(names))
 # remove all extra spaces from the text (full trim)
 a = '    asa    b      '
 print(' '.join(a.split()))
+
+# remove the non-numeric items from the list
+import pandas as pd
+itemlist = [1, 2, 'Jack', 4]
+new_itemlist = list(pd.to_numeric(itemlist, errors= 'coerce'))
+print(new_itemlist)
+# if the item is not equal to itself it is NaN
+print(new_itemlist[1] == new_itemlist[1], new_itemlist[2] == new_itemlist[2])
+# remove the NaN items from the list
+itemlist = [x for x in new_itemlist if x == x]
+print(itemlist)
