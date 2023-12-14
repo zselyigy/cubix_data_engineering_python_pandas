@@ -60,3 +60,11 @@ print(a.split())   # having an empty call of .split it assumes WHITESPACESE and 
 
 a = 'Jill SUsan Smith'
 print(a.split()[0])
+
+# concatenate elements of list
+names = ['Jack', 'Jill', 'Robert', 'Susan']
+print('-'.join(names))
+
+# remove all extra spaces from the text (full trim)
+a = '    asa    b      '
+print(' '.join(a.split()))
