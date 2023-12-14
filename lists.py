@@ -35,7 +35,18 @@ names = ['Jack', 'Jill', 'Robert', 'Susan']
 for name in names:
     print(name)
 
-# loosp through the elements of the list having the indexes during the process
+# loop through the elements of the list having the indexes during the process
 names = ['Jack', 'Jill', 'Robert', 'Susan']
 for i in range(len(names)):
     print(str(i) + ' ' + names[i])
+
+# reach the elements by index
+print(names[1])
+print(names[-2])    # larger negative index than the length of the list causes IndexError
+
+# check if something is an element of the list or not
+a = 'Jill'
+if a in names:
+    print('It is in the list.')
+else:
+    print('It is not in the list.')
