@@ -87,3 +87,12 @@ def listdiff(list1, list2):
 names1 = ['Jack', 'Jill', 'Robert', 'Susan']
 names2 = ['Joan', 'Roberto', 'Jack', 'Susan']
 print(listdiff(names1, names2))
+
+# delete variables
+print(names1)
+del names1
+# print(names1)
+
+# a pecific element of a list can be deleted
+del names2[2]
+print(names2)
