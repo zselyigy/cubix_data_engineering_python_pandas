@@ -48,11 +48,32 @@ for myparamtable in paramlist:
     if 'Input file' in myparamtable.columns:        # we filter only the rows corresponds to out current input file
         df = myparamtable
         df2 = df[ df['Input file'] == inputfile]    # keep only the appropriate rows
-        df2 = df2.reset_index(drop = True)          # reset the index after filterinf
+        df2 = df2.reset_index(drop = True)          # reset the index after filtering
         paramlist_filtered.append(df2)
     else:
         paramlist_filtered.append(myparamtable)     # this case we append the input file independent table
-print(paramlist_filtered)
+# print(paramlist_filtered)
+
+# create the input folder path
+inputfolder = paramlist_filtered[0]['Input folder path'][0]
+
+# put the products to be filtered to a list
+products_to_be_filtered = paramlist_filtered[1]['Product'].tolist()
+#print(products_to_be_filtered)
+# put the products to be filtered to a list - version 2
+print(list(paramlist_filtered[1].loc[ : , 'Product']))
+
+# get the list of the column headers
+print(list(paramlist_filtered[1].columns))
+
+# get one single row in a list
+print(list(paramlist_filtered[1].loc[0]))
+
+# get the position of a value in the list of a row
+print(list(paramlist_filtered[1].loc[0]).index('640 Fax Machine'))
+
+# get the position of a value in the list of a column
+print(list(paramlist_filtered[1].loc[ : , 'Product']).index('640 Fax Machine'))
 
 # create an empty list for the series of dataframes read
 df_list = []
