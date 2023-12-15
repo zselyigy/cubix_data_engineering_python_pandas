@@ -35,3 +35,4 @@ for mycolumns in usedcolumnlist:
     paramlist.append(df_param)
 
 print(paramlist)
+print('Paramlist file read.')
