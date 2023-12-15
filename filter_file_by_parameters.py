@@ -75,22 +75,19 @@ print(list(paramlist_filtered[1].loc[0]).index('640 Fax Machine'))
 # get the position of a value in the list of a column
 print(list(paramlist_filtered[1].loc[ : , 'Product']).index('640 Fax Machine'))
 
-# create an empty list for the series of dataframes read
-df_list = []
+## read the input file, clean, filter, translate and export it
 
-# loop through all files in the inputfolder
-for inputfile in os.listdir(basepath + '\\' + inputfolder):
-    # read the file to df dataframe
-    df_one = pd.read_csv(basepath + '\\' + inputfolder + '\\' + inputfile, sep = ';', encoding = 'utf-8')
-    # append it to the list of dataframes
-    df_list.append(df_one)
-
-# concatebate the dataframes
-df = pd.concat(df_list)
-# in case you want to concatenate not byt rows, but by columns (put them next to each other) use axis = 1
-#df = pd.concat(df_list, axis = 1)
+df = pd.read_csv(basepath + '\\' + inputfolder + '\\' + inputfile, sep = ';', encoding = 'utf-8')
 
 exec(compile(source=open('week2_Clean_data2.py').read(), filename='week2_Clean_data2.py', mode='exec'))
+df = df.drop(['index'], axis= 1)
+
+# filter column to values are in the list
+df = df[df['Product'].isin(products_to_be_filtered)]
+
+# get the unique values in a column (without duplicates)
+products_unique = list(df['Product'].unique())
+print(products_unique)
 exec(compile(source=open('Write_csv.py').read(), filename='Write_csv.py', mode='exec'))
 
 # create the dimension tables, too
