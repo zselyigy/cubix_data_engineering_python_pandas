@@ -12,6 +12,7 @@ df['Salesperson'] = df['Salesperson'].str.title()
 
 # remove the unnecessary spases from Customer column
 df['Customer'] = df['Customer'].str.replace('\s+', ' ', regex = True)
+df['Customer'] = df['Customer'].str.strip(' ')
 
 # separate the product name and the date from the Description column
 df[['Product', 'Date']] = df['Description'].str.split(' / ', expand = True)

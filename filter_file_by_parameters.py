@@ -61,19 +61,19 @@ inputfolder = paramlist_filtered[0]['Input folder path'][0]
 products_to_be_filtered = paramlist_filtered[1]['Product'].tolist()
 #print(products_to_be_filtered)
 # put the products to be filtered to a list - version 2
-print(list(paramlist_filtered[1].loc[ : , 'Product']))
+#print(list(paramlist_filtered[1].loc[ : , 'Product']))
 
 # get the list of the column headers
-print(list(paramlist_filtered[1].columns))
+#print(list(paramlist_filtered[1].columns))
 
 # get one single row in a list
-print(list(paramlist_filtered[1].loc[0]))
+#print(list(paramlist_filtered[1].loc[0]))
 
 # get the position of a value in the list of a row
-print(list(paramlist_filtered[1].loc[0]).index('640 Fax Machine'))
+#print(list(paramlist_filtered[1].loc[0]).index('640 Fax Machine'))
 
 # get the position of a value in the list of a column
-print(list(paramlist_filtered[1].loc[ : , 'Product']).index('640 Fax Machine'))
+#print(list(paramlist_filtered[1].loc[ : , 'Product']).index('640 Fax Machine'))
 
 ## read the input file, clean, filter, translate and export it
 
@@ -84,14 +84,34 @@ df = df.drop(['index'], axis= 1)
 
 # filter column to values are in the list
 df = df[df['Product'].isin(products_to_be_filtered)]
+#print(df)
 
 # get the unique values in a column (without duplicates)
 products_unique = list(df['Product'].unique())
-print(products_unique)
-exec(compile(source=open('Write_csv.py').read(), filename='Write_csv.py', mode='exec'))
+#print(products_unique)
 
-# create the dimension tables, too
-exec(compile(source=open('create_dimension_tables_callable_withlists.py').read(), filename='create_dimension_tables_callable_withlists.py', mode='exec'))
+# extend our dataframe with the regions of the customers
+dfp_regions = paramlist_filtered[2]
+#print(dfp_regions)
+# merge two dataframes
+# one column name is common in both
+# how:
+#   left: use only keys from left frame, similar to a SQL left outer join; preserve key order.
+#   right: use only keys from right frame, similar to a SQL right outer join; preserve key order.
+#   outer: use union of keys from both frames, similar to a SQL full outer join; sort keys lexicographically.
+#   inner: use intersection of keys from both frames, similar to a SQL inner join; preserve the order of the left keys.
+#   cross: creates the cartesian product from both frames, preserves the order of the left keys.
+print(list(df['Customer'].unique()))
+print(list(dfp_regions['Customer'].unique()))
+df = pd.merge(df, dfp_regions, on= 'Customer', how= 'inner')
+# we give two name, one for the left, another for the right dataframe
+#df = pd.merge(df, dfp_regions, left_on= 'Customer', right_on= 'Client', how= 'inner')
+print(df)
+
+
+outputfile = inputfile.replace('.csv', '_cleaned_filtered.csv')
+exec(compile(source=open('Export_to_csv.py').read(), filename='Export_to_csv.py', mode='exec'))
+
 
 
 # beep
