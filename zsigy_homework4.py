@@ -48,7 +48,19 @@ print('Input files read.')
 # clean the dataframe using the code based on Week 2 Homework 2
 df = pu.clean_order_data(df)
 
+# task 5 As the “Size” data in the 1st parameter table can be numeric and text values mixed,
+# convert “Size” column to STRING data type (otherwise only the texts will be matched, e.g. “XL”)
+df['Size'] = df['Size'].astype(str)
+paramlist[0]['Size'] = paramlist[0]['Size'].astype(str)
+
+# task 6 Filter the dataframe on only the rows with the Sizes and Countriesin the parameter file
+df = df[df['Size'].isin(paramlist[0]['Size'].tolist())]
+print(paramlist[0]['Size'].tolist())
+
+
+
 print(df)
+
 
 # create the output folder
 try:
