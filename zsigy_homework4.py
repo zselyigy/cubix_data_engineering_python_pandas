@@ -61,7 +61,13 @@ df = df[df['Country'].isin(paramlist[1]['Country'].tolist())]
 #print(df['Size'].unique())
 #print(df['Country'].unique())
 
-#print(df)
+# task 7 Look up the related Class Names of the class id’s (“H”, “M”, “L”) from the parameter file, into a separate “Class Name” column in the dataframe
+df = pd.merge(df, paramlist[2], left_on= 'Class', right_on= 'Class ID', how= 'inner')
+
+# task 8 Remove “Class” column, as we only need “Class ID” column instead (to make it easy to distinguish it from Class Name)
+df = df.drop(['Class'], axis = 1)
+
+print(df)
 
 
 # create the output folder
