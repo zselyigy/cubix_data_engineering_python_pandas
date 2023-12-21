@@ -87,4 +87,4 @@ def export_to_csv(basepath, outputfolder, outputfile, df):
               index = False, sep = ';', encoding = 'utf-8')
     
     # message to the user
-    print('csv file exported.')
+    print('csv file (' + outputfile + ') exported.')
