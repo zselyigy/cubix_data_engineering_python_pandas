@@ -4,7 +4,7 @@
 # For details look in the README.md file. (task 10)
 
 # import modules
-import pandas_utility_functions as pu       # module of the utility functions
+import pandas_utility_functions as pu       # Module of utility functions used instead of direct execution of py files.
 import pandas as pd, os, winsound, time
 
 # store the starttime
@@ -34,7 +34,7 @@ df_list = []
 # loop through all files in the inputfolder
 for inputfile in os.listdir(basepath + '\\' + inputfolder):
     # read the file to df_one dataframe
-    df_one = pd.read_csv(basepath + '\\' + inputfolder + '\\' + inputfile, sep = ';', encoding = 'utf-8')
+    df_one = pu.read_csv(basepath, inputfolder, inputfile)
     # append it to the list of dataframes
     df_list.append(df_one)
 

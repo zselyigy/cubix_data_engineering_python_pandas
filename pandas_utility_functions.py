@@ -4,6 +4,7 @@ def calc_runtime(start, end):
     minute, second = divmod(remainder, 60)
     return 'Runtime {:0>2}:{:0>2}:{:05.2f}'.format(int(hour), int(minute), second)
 
+
 # function for the reading of the parameter file
 def read_parameters(paramfolderpath, paramfile, paramfile_sheet, usedcolumnlist):
     import pandas as pd
@@ -22,6 +23,7 @@ def read_parameters(paramfolderpath, paramfile, paramfile_sheet, usedcolumnlist)
     # print(paramlist)
     print('Paramlist file (' + paramfile + ') read.')
     return paramlist
+
 
 # task 3 Create a “Clean_order_data.ipynb” external program, from only the data cleaning part of the Homework2 program (creating dimension tables is not needed now).
 def clean_order_data(df):
@@ -59,11 +61,21 @@ def clean_order_data(df):
 
     return df
 
+
+# task 2 Use your “Read_csv.ipynb” external program to read all input files.
+def read_csv(basepath, inputfolder, inputfile):
+    import pandas as pd
+
+    # import the csv file to a dataframe
+    df = pd.read_csv(basepath + '\\' + inputfolder + '\\' + inputfile, sep = ';', encoding = 'utf-8')
+
+    return df
+
+
 # task 9 Use your “Export_to_csv.ipynb” external program to export the cleaned, filtered dataframe to the output folder (“Output”).
-# A bit more general export function was created.
 def export_to_csv(basepath, outputfolder, outputfile, df):
     import os
-    
+
     # create the output folder
     try:
         os.mkdir(basepath + '\\' + outputfolder)
