@@ -55,11 +55,13 @@ paramlist[0]['Size'] = paramlist[0]['Size'].astype(str)
 
 # task 6 Filter the dataframe on only the rows with the Sizes and Countriesin the parameter file
 df = df[df['Size'].isin(paramlist[0]['Size'].tolist())]
-print(paramlist[0]['Size'].tolist())
+df = df[df['Country'].isin(paramlist[1]['Country'].tolist())]
 
+# check if the filtering was successful or not
+#print(df['Size'].unique())
+#print(df['Country'].unique())
 
-
-print(df)
+#print(df)
 
 
 # create the output folder
