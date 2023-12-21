@@ -20,5 +20,41 @@ def read_parameters(paramfolderpath, paramfile, paramfile_sheet, usedcolumnlist)
         paramlist.append(df_param)
 
     # print(paramlist)
-    print('Paramlist file ' + paramfile + ' read.')
+    print('Paramlist file (' + paramfile + ') read.')
     return paramlist
+
+# task 3 Create a “Clean_order_data.ipynb” external program, from only the data cleaning part of the Homework2 program (creating dimension tables is not needed now).
+def clean_order_data(df):
+    # import the pandas data analysis library
+    import pandas as pd
+
+    # remove the extra leading and tailing spacec from column 'Class'
+    df['Class'] = df['Class'].str.strip(' ')
+
+    # covert the type of column 'OrderDate" to DATETIME
+    df['OrderDate'] = pd.to_datetime(df['OrderDate'], dayfirst = False)
+
+    # conversion of the data of column 'LineTotal' to float
+    # replace the comma decimal separator to dot
+    df['LineTotal'] = df['LineTotal'].str.replace(',', '.')
+    df['LineTotal'] = df['LineTotal'].astype(dtype = 'float64', errors = 'ignore')
+
+    # separate the Size from the product name
+    df[['Product_name', 'Size']] = df['ProductName'].str.split(', ', expand = True)
+    # we do not need the original, uncleaned ProductName column
+    df = df.drop(['ProductName'], axis = 1)
+    # replace the 'Black', 'Red' and 'Blue' "sizes" with '-'
+    pattern = r'\b(?:Black|Red|Blue)\b'
+    df['Size'] = df['Size'].str.replace(pattern, '-', regex = True)
+    # same with list:
+    # colorlist = ['Black', 'Blue', 'Red']
+    # df['Size'] = df['Size'].replace(colorlist, '-')
+    # sort the df dataframe by “OrderDate” and “Country”
+    df = df.sort_values(by = ['OrderDate', 'Country'])
+    # reset the index
+    df = df.reset_index(drop = True)
+
+    # message to the user
+    print('Dataframe cleaned.')
+
+    return df

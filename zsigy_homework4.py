@@ -11,8 +11,9 @@ import pandas as pd, os, winsound, time
 starttime = time.time()
 
 # base path related variables
-basepath = r'.\Python_DA'
+basepath = r'.\Python_DA\Homework4'
 outputfolder = 'Output'
+inputfolder = 'Input'
 
 # task 1 Read the parameter tables from “Parameters_Homework4.xlsx”
 # parameter related data
@@ -24,8 +25,30 @@ paramlist = []
 
 # read the parameter file
 paramlist = pu.read_parameters(paramfolderpath, paramfile, paramfile_sheet, usedcolumnlist)
-print(paramlist)
+#print(paramlist)
 
+# task 2 Loop through the input files of the input folder, use your “Read_csv.ipynb” external program to read all of them, and append them into 1 dataframe.
+# create an empty list for the series of dataframes read
+df_list = []
+
+# loop through all files in the inputfolder
+for inputfile in os.listdir(basepath + '\\' + inputfolder):
+    # read the file to df_one dataframe
+    df_one = pd.read_csv(basepath + '\\' + inputfolder + '\\' + inputfile, sep = ';', encoding = 'utf-8')
+    # append it to the list of dataframes
+    df_list.append(df_one)
+
+# concatenate the dataframes
+df = pd.concat(df_list)
+
+# print progress message
+print('Input files read.')
+
+# task 4 Run this “Clean_order_data.ipynb” external program to clean the dataframe
+# clean the dataframe using the code based on Week 2 Homework 2
+df = pu.clean_order_data(df)
+
+print(df)
 
 # create the output folder
 try:
