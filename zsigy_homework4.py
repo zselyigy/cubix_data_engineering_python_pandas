@@ -61,24 +61,17 @@ df = df[df['Country'].isin(paramlist[1]['Country'].tolist())]
 #print(df['Size'].unique())
 #print(df['Country'].unique())
 
-# task 7 Look up the related Class Names of the class id’s (“H”, “M”, “L”) from the parameter file, into a separate “Class Name” column in the dataframe
+# task 7 Look up the related Class Names of the class id’s (“H”, “M”, “L”) from the parameter file, into a separate “Class Name” column in the dataframe.
 df = pd.merge(df, paramlist[2], left_on= 'Class', right_on= 'Class ID', how= 'inner')
 
 # task 8 Remove “Class” column, as we only need “Class ID” column instead (to make it easy to distinguish it from Class Name)
 df = df.drop(['Class'], axis = 1)
 
-print(df)
+# task 9 Use your “Export_to_csv.ipynb” external program to export the cleaned, filtered dataframe to the output folder (“Output”),
+# the output file’s name should be: “Orders_all_periods_cleaned_filtered.csv”
+pu.export_to_csv(basepath, outputfolder, 'Orders_all_periods_cleaned_filtered.csv', df)
 
-
-# create the output folder
-try:
-    os.mkdir(basepath + '\\' + outputfolder)
-except:
-    pass
-
-
-
-
+# task 11 At the end, write out the runtime, and a beep sound and a final printed message should notify the user.
 # store the endtime and print runtime
 endtime = time.time()
 print(pu.calc_runtime(starttime, endtime))

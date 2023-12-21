@@ -58,3 +58,21 @@ def clean_order_data(df):
     print('Dataframe cleaned.')
 
     return df
+
+# task 9 Use your “Export_to_csv.ipynb” external program to export the cleaned, filtered dataframe to the output folder (“Output”).
+# A bit more general export function was created.
+def export_to_csv(basepath, outputfolder, outputfile, df):
+    import os
+    
+    # create the output folder
+    try:
+        os.mkdir(basepath + '\\' + outputfolder)
+    except:
+        pass
+
+    # export the dataframe
+    df.to_csv(basepath + '\\' + outputfolder + '\\' + outputfile,
+              index = False, sep = ';', encoding = 'utf-8')
+    
+    # message to the user
+    print('csv file exported.')
