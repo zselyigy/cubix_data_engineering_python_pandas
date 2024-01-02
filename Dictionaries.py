@@ -36,3 +36,16 @@ namelist = ['Jack', 'Jill', 'Susan']
 agelist = [34, 25, 28]
 names_ages = dict(zip(namelist, agelist))
 print(names_ages)
+
+# remove duplicated using dictionaries
+namelist = ['Jack', 'Jill', 'Susan', 'Jack', 'Jill']
+namelist_unique = dict.fromkeys(namelist)
+print(namelist_unique)
+# convert the dictionary back to list
+namelist_unique = list(namelist_unique)
+print(namelist_unique)
+
+# check the python version
+from platform import python_version
+print(python_version())
+
