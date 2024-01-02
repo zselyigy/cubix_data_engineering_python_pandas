@@ -53,9 +53,17 @@ df = pu.clean_order_data(df)
 df['Size'] = df['Size'].astype(str)
 paramlist[0]['Size'] = paramlist[0]['Size'].astype(str)
 
-# task 6 Filter the dataframe on only the rows with the Sizes and Countriesin the parameter file
-df = df[df['Size'].isin(paramlist[0]['Size'].tolist())]
-df = df[df['Country'].isin(paramlist[1]['Country'].tolist())]
+# task 6 Filter the dataframe on only the rows with the Sizes and Countries in the parameter file
+# df = df[df['Size'].isin(paramlist[0]['Size'].tolist())]
+# df = df[df['Country'].isin(paramlist[1]['Country'].tolist())]
+# a more general solution suggested by Szabolcs
+filter_column_list = ['Size', 'Country']
+for i in range( len(paramlist) ):
+    for filter_column in filter_column_list:
+        if filter_column in paramlist[i].columns:
+            # filter column to values which are among the values in the appropriated column of the paramlist
+            df = df[ df[filter_column].isin(paramlist[i][filter_column].tolist()) ]
+
 
 # check if the filtering was successful or not
 #print(df['Size'].unique())
