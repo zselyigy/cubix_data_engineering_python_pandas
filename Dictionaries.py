@@ -29,3 +29,10 @@ for key, value in personal_data.items():
 # add a new item (key-value pair) to the dictionary
 personal_data['Height'] = 180
 print(personal_data)
+
+
+# create a dictionary from lists
+namelist = ['Jack', 'Jill', 'Susan']
+agelist = [34, 25, 28]
+names_ages = dict(zip(namelist, agelist))
+print(names_ages)
