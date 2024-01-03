@@ -1,16 +1,16 @@
-Product;Customer;Date;Revenue;Salesperson;Year;Month;Region
-640 Fax Machine;Surry Memorial Hospital;2016-01-22;1035;Forrest Gump;2016;1;East
-640 Fax Machine;Surry Memorial Hospital;2016-02-19;1035;Forrest Gump;2016;2;East
-640 Fax Machine;Surry Memorial Hospital;2016-03-25;1035;Forrest Gump;2016;3;East
-640 Fax Machine;Surry Memorial Hospital;2016-07-09;1035;Forrest Gump;2016;7;East
-Fax Paper;Surry Memorial Hospital;2016-08-01;510;James Bond;2016;8;East
-640 Fax Machine;Surry Memorial Hospital;2016-08-23;1380;Forrest Gump;2016;8;East
-640 Fax Machine;Surry Memorial Hospital;2016-09-13;345;James Bond;2016;9;East
-640 Fax Machine;Surry Memorial Hospital;2016-09-27;345;James Bond;2016;9;East
-640 Fax Machine;Surry Memorial Hospital;2016-10-04;690;James Bond;2016;10;East
-Fax Paper;Surry Memorial Hospital;2016-10-06;990;James Bond;2016;10;East
-640 Fax Machine;Surry Memorial Hospital;2016-10-10;345;James Bond;2016;10;East
-640 Fax Machine;Surry Memorial Hospital;2016-12-01;345;James Bond;2016;12;East
+Produkt;Kunde;Datum;Einnahmen;Verkäufer;Jahr;Monat;Region
+640 Fax Machine;Surry Memorial Hospital;2016-01-22;1035;Forrest Gump;2016;1;Ost
+640 Fax Machine;Surry Memorial Hospital;2016-02-19;1035;Forrest Gump;2016;2;Ost
+640 Fax Machine;Surry Memorial Hospital;2016-03-25;1035;Forrest Gump;2016;3;Ost
+640 Fax Machine;Surry Memorial Hospital;2016-07-09;1035;Forrest Gump;2016;7;Ost
+Fax Paper;Surry Memorial Hospital;2016-08-01;510;James Bond;2016;8;Ost
+640 Fax Machine;Surry Memorial Hospital;2016-08-23;1380;Forrest Gump;2016;8;Ost
+640 Fax Machine;Surry Memorial Hospital;2016-09-13;345;James Bond;2016;9;Ost
+640 Fax Machine;Surry Memorial Hospital;2016-09-27;345;James Bond;2016;9;Ost
+640 Fax Machine;Surry Memorial Hospital;2016-10-04;690;James Bond;2016;10;Ost
+Fax Paper;Surry Memorial Hospital;2016-10-06;990;James Bond;2016;10;Ost
+640 Fax Machine;Surry Memorial Hospital;2016-10-10;345;James Bond;2016;10;Ost
+640 Fax Machine;Surry Memorial Hospital;2016-12-01;345;James Bond;2016;12;Ost
 640 Fax Machine;Palm Beach Gardens;2016-01-25;345;Mary Poppins;2016;1;West
 640 Fax Machine;Palm Beach Gardens;2016-02-04;690;Mary Poppins;2016;2;West
 640 Fax Machine;Palm Beach Gardens;2016-02-27;345;James Bond;2016;2;West
@@ -25,65 +25,65 @@ Fax Paper;Surry Memorial Hospital;2016-10-06;990;James Bond;2016;10;East
 640 Fax Machine;Palm Beach Gardens;2016-09-28;345;James Bond;2016;9;West
 640 Fax Machine;Palm Beach Gardens;2016-10-11;345;Mary Poppins;2016;10;West
 640 Fax Machine;Palm Beach Gardens;2016-10-14;345;Mary Poppins;2016;10;West
-DeskJet 895Cse;Dahlton's;2016-01-26;230;Luke Skywalker;2016;1;North
-DeskJet 895Cse;Dahlton's;2016-03-14;460;Luke Skywalker;2016;3;North
-DeskJet 895Cse;Dahlton's;2016-03-20;460;Luke Skywalker;2016;3;North
-DeskJet 895Cse;Dahlton's;2016-05-26;460;Luke Skywalker;2016;5;North
-DeskJet 895Cse;Dahlton's;2016-06-11;460;Luke Skywalker;2016;6;North
-Fax Paper;Dahlton's;2016-06-16;360;Indiana Jones;2016;6;North
-DeskJet 895Cse;Dahlton's;2016-07-11;460;Luke Skywalker;2016;7;North
-DeskJet 895Cse;Dahlton's;2016-08-10;690;Luke Skywalker;2016;8;North
-DeskJet 895Cse;Dahlton's;2016-08-10;460;Luke Skywalker;2016;8;North
-DeskJet 895Cse;Dahlton's;2016-09-14;460;Luke Skywalker;2016;9;North
-DeskJet 895Cse;Dahlton's;2016-09-22;460;Luke Skywalker;2016;9;North
-640 Fax Machine;Dahlton's;2016-10-07;345;Luke Skywalker;2016;10;North
-Fax Paper;Dahlton's;2016-11-01;240;Indiana Jones;2016;11;North
-DeskJet 895Cse;Dahlton's;2016-11-21;230;Luke Skywalker;2016;11;North
-DeskJet 895Cse;Dahlton's;2016-11-24;460;Luke Skywalker;2016;11;North
-DeskJet 895Cse;Dahlton's;2016-11-27;230;Luke Skywalker;2016;11;North
-DeskJet 895Cse;Bloomington Library;2016-01-27;230;Luke Skywalker;2016;1;North
-DeskJet 895Cse;Bloomington Library;2016-03-03;460;Luke Skywalker;2016;3;North
-Fax Paper;Bloomington Library;2016-08-01;360;Luke Skywalker;2016;8;North
-Fax Paper;Bloomington Library;2016-09-22;240;Luke Skywalker;2016;9;North
-640 Fax Machine;Camdens;2016-02-08;345;Sarah Connor;2016;2;East
-640 Fax Machine;Camdens;2016-02-08;345;Sarah Connor;2016;2;East
-640 Fax Machine;Camdens;2016-02-17;345;Sarah Connor;2016;2;East
-640 Fax Machine;Camdens;2016-02-26;345;Sarah Connor;2016;2;East
-640 Fax Machine;Camdens;2016-06-03;345;Sarah Connor;2016;6;East
-640 Fax Machine;Camdens;2016-06-14;345;Sarah Connor;2016;6;East
-Fax Paper;Camdens;2016-07-15;330;Katniss Everdeen;2016;7;East
-640 Fax Machine;Camdens;2016-07-17;345;Sarah Connor;2016;7;East
-640 Fax Machine;Camdens;2016-09-07;345;Sarah Connor;2016;9;East
-640 Fax Machine;Camdens;2016-09-15;345;Sarah Connor;2016;9;East
-640 Fax Machine;Camdens;2016-09-18;345;Sarah Connor;2016;9;East
-640 Fax Machine;Camdens;2016-10-05;345;Sarah Connor;2016;10;East
-640 Fax Machine;Camdens;2016-10-19;345;Sarah Connor;2016;10;East
-Fax Paper;Giant's Ridge Villas;2016-02-12;330;Carrie Bradshaw;2016;2;South
-Fax Paper;Gidget's Gadgets;2016-02-14;330;Carrie Bradshaw;2016;2;North
-Fax Paper;Gidget's Gadgets;2016-04-09;480;Carrie Bradshaw;2016;4;North
-Fax Paper;Gidget's Gadgets;2016-06-06;480;Carrie Bradshaw;2016;6;North
-Fax Paper;Gidget's Gadgets;2016-07-27;330;Carrie Bradshaw;2016;7;North
-Fax Paper;Buck Hill Ski Resort;2016-02-14;330;Carrie Bradshaw;2016;2;South
-640 Fax Machine;Electric Beach;2016-02-15;345;Mary Poppins;2016;2;South
-640 Fax Machine;Electric Beach;2016-06-21;345;Mary Poppins;2016;6;South
+DeskJet 895Cse;Dahlton's;2016-01-26;230;Luke Skywalker;2016;1;Nord
+DeskJet 895Cse;Dahlton's;2016-03-14;460;Luke Skywalker;2016;3;Nord
+DeskJet 895Cse;Dahlton's;2016-03-20;460;Luke Skywalker;2016;3;Nord
+DeskJet 895Cse;Dahlton's;2016-05-26;460;Luke Skywalker;2016;5;Nord
+DeskJet 895Cse;Dahlton's;2016-06-11;460;Luke Skywalker;2016;6;Nord
+Fax Paper;Dahlton's;2016-06-16;360;Indiana Jones;2016;6;Nord
+DeskJet 895Cse;Dahlton's;2016-07-11;460;Luke Skywalker;2016;7;Nord
+DeskJet 895Cse;Dahlton's;2016-08-10;690;Luke Skywalker;2016;8;Nord
+DeskJet 895Cse;Dahlton's;2016-08-10;460;Luke Skywalker;2016;8;Nord
+DeskJet 895Cse;Dahlton's;2016-09-14;460;Luke Skywalker;2016;9;Nord
+DeskJet 895Cse;Dahlton's;2016-09-22;460;Luke Skywalker;2016;9;Nord
+640 Fax Machine;Dahlton's;2016-10-07;345;Luke Skywalker;2016;10;Nord
+Fax Paper;Dahlton's;2016-11-01;240;Indiana Jones;2016;11;Nord
+DeskJet 895Cse;Dahlton's;2016-11-21;230;Luke Skywalker;2016;11;Nord
+DeskJet 895Cse;Dahlton's;2016-11-24;460;Luke Skywalker;2016;11;Nord
+DeskJet 895Cse;Dahlton's;2016-11-27;230;Luke Skywalker;2016;11;Nord
+DeskJet 895Cse;Bloomington Library;2016-01-27;230;Luke Skywalker;2016;1;Nord
+DeskJet 895Cse;Bloomington Library;2016-03-03;460;Luke Skywalker;2016;3;Nord
+Fax Paper;Bloomington Library;2016-08-01;360;Luke Skywalker;2016;8;Nord
+Fax Paper;Bloomington Library;2016-09-22;240;Luke Skywalker;2016;9;Nord
+640 Fax Machine;Camdens;2016-02-08;345;Sarah Connor;2016;2;Ost
+640 Fax Machine;Camdens;2016-02-08;345;Sarah Connor;2016;2;Ost
+640 Fax Machine;Camdens;2016-02-17;345;Sarah Connor;2016;2;Ost
+640 Fax Machine;Camdens;2016-02-26;345;Sarah Connor;2016;2;Ost
+640 Fax Machine;Camdens;2016-06-03;345;Sarah Connor;2016;6;Ost
+640 Fax Machine;Camdens;2016-06-14;345;Sarah Connor;2016;6;Ost
+Fax Paper;Camdens;2016-07-15;330;Katniss Everdeen;2016;7;Ost
+640 Fax Machine;Camdens;2016-07-17;345;Sarah Connor;2016;7;Ost
+640 Fax Machine;Camdens;2016-09-07;345;Sarah Connor;2016;9;Ost
+640 Fax Machine;Camdens;2016-09-15;345;Sarah Connor;2016;9;Ost
+640 Fax Machine;Camdens;2016-09-18;345;Sarah Connor;2016;9;Ost
+640 Fax Machine;Camdens;2016-10-05;345;Sarah Connor;2016;10;Ost
+640 Fax Machine;Camdens;2016-10-19;345;Sarah Connor;2016;10;Ost
+Fax Paper;Giant's Ridge Villas;2016-02-12;330;Carrie Bradshaw;2016;2;Süd
+Fax Paper;Gidget's Gadgets;2016-02-14;330;Carrie Bradshaw;2016;2;Nord
+Fax Paper;Gidget's Gadgets;2016-04-09;480;Carrie Bradshaw;2016;4;Nord
+Fax Paper;Gidget's Gadgets;2016-06-06;480;Carrie Bradshaw;2016;6;Nord
+Fax Paper;Gidget's Gadgets;2016-07-27;330;Carrie Bradshaw;2016;7;Nord
+Fax Paper;Buck Hill Ski Resort;2016-02-14;330;Carrie Bradshaw;2016;2;Süd
+640 Fax Machine;Electric Beach;2016-02-15;345;Mary Poppins;2016;2;Süd
+640 Fax Machine;Electric Beach;2016-06-21;345;Mary Poppins;2016;6;Süd
 DeskJet 895Cse;Joe's Auto Parts;2016-03-04;690;Luke Skywalker;2016;3;West
 DeskJet 895Cse;Joe's Auto Parts;2016-06-13;230;Luke Skywalker;2016;6;West
 DeskJet 895Cse;Joe's Auto Parts;2016-06-25;460;Luke Skywalker;2016;6;West
-DeskJet 895Cse;ABC Travel;2016-03-06;460;Jack Bauer;2016;3;East
-DeskJet 895Cse;ABC Travel;2016-04-06;230;Jack Bauer;2016;4;East
-640 Fax Machine;ABC Travel;2016-04-17;345;Jack Bauer;2016;4;East
-DeskJet 895Cse;ABC Travel;2016-06-09;920;Jack Bauer;2016;6;East
-DeskJet 895Cse;ABC Travel;2016-06-22;920;Jack Bauer;2016;6;East
-640 Fax Machine;ABC Travel;2016-07-07;345;Jack Bauer;2016;7;East
-640 Fax Machine;ABC Travel;2016-09-23;1035;Jack Bauer;2016;9;East
-Fax Paper;ABC Travel;2016-09-25;240;Jack Bauer;2016;9;East
-640 Fax Machine;ABC Travel;2016-11-28;345;Jack Bauer;2016;11;East
-Fax Paper;ABC Travel;2016-12-04;510;Jack Bauer;2016;12;East
-640 Fax Machine;Artec;2016-03-27;345;Sarah Connor;2016;3;North
-640 Fax Machine;Artec;2016-04-07;345;Sarah Connor;2016;4;North
-640 Fax Machine;Artec;2016-05-05;345;Sarah Connor;2016;5;North
-640 Fax Machine;Artec;2016-06-09;345;Sarah Connor;2016;6;North
-640 Fax Machine;Artec;2016-07-24;345;Sarah Connor;2016;7;North
-640 Fax Machine;Artec;2016-08-05;345;Sarah Connor;2016;8;North
-640 Fax Machine;Artec;2016-09-21;345;Sarah Connor;2016;9;North
-640 Fax Machine;Long Lake Landing;2016-11-04;345;Sarah Connor;2016;11;North
+DeskJet 895Cse;ABC Travel;2016-03-06;460;Jack Bauer;2016;3;Ost
+DeskJet 895Cse;ABC Travel;2016-04-06;230;Jack Bauer;2016;4;Ost
+640 Fax Machine;ABC Travel;2016-04-17;345;Jack Bauer;2016;4;Ost
+DeskJet 895Cse;ABC Travel;2016-06-09;920;Jack Bauer;2016;6;Ost
+DeskJet 895Cse;ABC Travel;2016-06-22;920;Jack Bauer;2016;6;Ost
+640 Fax Machine;ABC Travel;2016-07-07;345;Jack Bauer;2016;7;Ost
+640 Fax Machine;ABC Travel;2016-09-23;1035;Jack Bauer;2016;9;Ost
+Fax Paper;ABC Travel;2016-09-25;240;Jack Bauer;2016;9;Ost
+640 Fax Machine;ABC Travel;2016-11-28;345;Jack Bauer;2016;11;Ost
+Fax Paper;ABC Travel;2016-12-04;510;Jack Bauer;2016;12;Ost
+640 Fax Machine;Artec;2016-03-27;345;Sarah Connor;2016;3;Nord
+640 Fax Machine;Artec;2016-04-07;345;Sarah Connor;2016;4;Nord
+640 Fax Machine;Artec;2016-05-05;345;Sarah Connor;2016;5;Nord
+640 Fax Machine;Artec;2016-06-09;345;Sarah Connor;2016;6;Nord
+640 Fax Machine;Artec;2016-07-24;345;Sarah Connor;2016;7;Nord
+640 Fax Machine;Artec;2016-08-05;345;Sarah Connor;2016;8;Nord
+640 Fax Machine;Artec;2016-09-21;345;Sarah Connor;2016;9;Nord
+640 Fax Machine;Long Lake Landing;2016-11-04;345;Sarah Connor;2016;11;Nord

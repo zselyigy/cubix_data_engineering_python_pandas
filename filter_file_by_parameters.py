@@ -106,8 +106,22 @@ print(list(dfp_regions['Customer'].unique()))
 df = pd.merge(df, dfp_regions, on= 'Customer', how= 'inner')
 # we give two name, one for the left, another for the right dataframe
 #df = pd.merge(df, dfp_regions, left_on= 'Customer', right_on= 'Client', how= 'inner')
-print(df)
+#print(df)
 
+# replace the English headers with German ones
+dfp_headers = paramlist_filtered[3]
+# add column values to list
+oldheader_list = dfp_headers['Old header'].tolist()
+newheader_list = dfp_headers['New header'].tolist()
+# create dictionaries from the lists
+header_dict = dict(zip(oldheader_list, newheader_list))
+# translate headers based on the dictionary
+df.columns = pd.Series(df.columns).replace(header_dict)
+
+# translate column values based on a dictionary
+header_dict2 = dict(zip(['North', 'East', 'South', 'West'], ['Nord', 'Ost', 'Süd', 'West']))
+df['Region'] = df['Region'].replace(header_dict2)
+print(df)
 
 outputfile = inputfile.replace('.csv', '_cleaned_filtered.csv')
 exec(compile(source=open('Export_to_csv.py').read(), filename='Export_to_csv.py', mode='exec'))
