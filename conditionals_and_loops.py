@@ -110,3 +110,10 @@ while not valid:
         print('Type a NUMBER, not a text!')
 
 print('The number squared: ', n_numeric ** 2)
+
+# loop through all the files in a folder
+import os
+inputfolderpath = r'.\Python_DA\Output\All periods'
+for filename in os.listdir(inputfolderpath):
+    if filename.find('.csv') and filename.lower().find('rev')>= 0:    # filter files fulfilling specific conditions
+        print(filename)
