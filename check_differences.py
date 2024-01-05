@@ -57,7 +57,11 @@ print('Missing products:', missingproducts)
 
 # replace NaN values to any value in a column
 df['Unit price'] = df['Unit price'].fillna(0)
-print(df)
+print(paramlist[0])
+
+# calculation of the last row number in Excel
+lastrow_excel = paramlist[0].shape[0] + 1
+print(lastrow_excel)
 
 ## final section - notification sound, runtime, final message to user
 # beep
