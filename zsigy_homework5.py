@@ -7,6 +7,7 @@
 import pandas_utility_functions as pu       # Module of utility functions used instead of direct execution of py files.
 import pandas as pd, os, winsound, time
 from icecream import ic                     # a nice library for the replacement of print and more
+import matplotlib.pyplot as plt, numpy as np
 
 # store the starttime
 starttime = time.time()
@@ -82,6 +83,17 @@ for row_index, data in paramlist[0].iterrows():
     # the same as the input file, but with a “_cleaned_filtered_translated.csv” ending
     pu.export_to_csv(basepath, outputfolder + '\\' + inputfolder[-4 : ], inputfile[ : -4] + '_cleaned_filtered_translated.csv', df)
 
+# task 4 Read the “Orders_2011_cleaned_filtered_translated.csv” into a dataframe
+df_for_pivottable_and_plotting = pu.read_csv(basepath, outputfolder + r'\2011', 'Orders_2011_cleaned_filtered_translated.csv')
+# ic(df_for_pivottable_and_plotting)
+
+# task 4.a Create a Pivot Tableon it, Rows: “Size”, Columns: “Class Name”, Values: “Revenue”, and write it out in cell output
+pivot_sum_rev = pd.pivot_table(df_for_pivottable_and_plotting, values= 'Revenue', index= ['Size'], columns= ['Class Name'], aggfunc= np.sum, fill_value= 0)
+ic(pivot_sum_rev)
+
+# task 4.b Create a Stacked column (vertical bar) Charton the Pivot table, and write it out
+pivot_sum_rev.plot(kind= 'barh', stacked= True)
+
 # task 6 At the end, write out the runtime, and a beep sound and a final printed message should notify the user.
 endtime = time.time()
 print(pu.calc_runtime(starttime, endtime))
@@ -91,3 +103,6 @@ frequency = 440  # in Hz
 duration = 500  # in ms
 winsound.Beep(frequency, duration)
 print('All tasks are finished in week 5 Homework 5.')
+
+# task 4.b figure is shown only at the end not to count in the runtime, but keep alive as long as the user wants
+plt.show()
