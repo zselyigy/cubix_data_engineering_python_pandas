@@ -93,7 +93,15 @@ df['Sold quantity range'] = df['Product']
 # change the values in this new column to the desired ones
 df.loc[df['Sold quantity'] >= average_qty, 'Sold qunatity range'] = 'Above average'
 df.loc[df['Sold quantity'] < average_qty, 'Sold qunatity range'] = 'Belos average'
-print(df)
+
+# import numpy library, which is used for working with arrays, matrices etc.
+import numpy as np
+# create a pivot table (both the columns and rows have header)
+# values: the values in the table, index: rows, columns: columns, aggfunc: aggregation values, fill_value: fill the missing vlues
+pivot_sum_rev = pd.pivot_table(df, values= 'Revenue', index= ['Customer'], columns= ['Product'], aggfunc= np.sum, fill_value= 0)
+print(pivot_sum_rev)
+
+
 
 ## final section - notification sound, runtime, final message to user
 # beep
