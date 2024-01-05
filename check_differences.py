@@ -55,13 +55,42 @@ missingproducts = list(df.loc[df['Product name'].isnull(), 'Product'])
 missingproducts = list(dict.fromkeys(missingproducts))
 print('Missing products:', missingproducts)
 
+# find the rows where the 'Unit price' is missing and put the corresponding value from the 'Product' column to the list
+missingprices = list(df.loc[df['Unit price'].isnull(), 'Product'])
+# remove the duplicates
+missingprices = list(dict.fromkeys(missingprices))
+print('Missing unit prices:', missingprices)
+
+
 # replace NaN values to any value in a column
 df['Unit price'] = df['Unit price'].fillna(0)
 print(paramlist[0])
 
-# calculation of the last row number in Excel
-lastrow_excel = paramlist[0].shape[0] + 1
-print(lastrow_excel)
+
+# add the missing items to the parameter sheet
+if len(missingproducts) > 0:
+    # calculation of the last row number in Excel
+    lastrow_excel = paramlist[0].shape[0] + 1
+
+    # import the openpyxl
+    import openpyxl
+
+    # load the Excel workbook
+    paramfile_withpath = paramfolderpath + '\\' + paramfile
+    wb = openpyxl.load_workbook(paramfile_withpath)
+    # define ws as the appropriate worksheet of the Excel workbook
+    ws = wb[paramfile_sheet]
+
+    # add the missing items to the parameter sheet
+    i = 0
+    # for all items in missing products list
+    for product in missingproducts:
+        i += 1
+        # write the data into the specific cells of the Excel sheet
+        ws.cell(row = lastrow_excel + i, column= 1).value = product
+
+    # save the Excel files (it also closes it)
+    wb.save(paramfile_withpath)
 
 ## final section - notification sound, runtime, final message to user
 # beep
@@ -74,4 +103,8 @@ endtime = time.time()
 # print runtime
 print(runtime(starttime, endtime))
 
-print('All source file analyzed!')
+if len(missingproducts) > 0:
+    print('Missing products added to the parameter table!')
+    print(missingproducts)
+else:
+    print('No missing products were found in the parameter table!')
