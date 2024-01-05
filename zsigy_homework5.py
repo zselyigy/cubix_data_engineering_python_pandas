@@ -53,69 +53,34 @@ for row_index, data in dfp_folders.iterrows():
     # task 2 As the “Size” data in the 1st parameter table can be numeric and text values mixed,
     # convert “Size” column to STRING data type (otherwise only the texts will be matched, e.g. “XL”).
     paramlist_filt[1]['Size'] = paramlist_filt[1]['Size'].astype(str)
-    icecream.ic(paramlist_filt[1]['Size'])
+#    icecream.ic(paramlist_filt[1]['Size'])
     df['Size'] = df['Size'].astype(str)
-    icecream.ic( df['Size'])
+#    icecream.ic( df['Size'])
 
     # task 3.d Filter it on only the rows with the Sizes and Countries specified for the input file
-    # Special thanks to Szabolcs for suggesting a more general solution
+    # Special thanks to Szabolcs for suggesting a more general solution.
     filter_column_list = ['Size', 'Country']
     for i in range( len(paramlist_filt) ):
         for filter_column in filter_column_list:
             if filter_column in paramlist[i].columns:
                 # filter column to values which are among the values in the appropriated column of the paramlist
-                df = df[ df[filter_column].isin(paramlist[i][filter_column].tolist()) ]
+                df = df[ df[filter_column].isin(paramlist_filt[i][filter_column].tolist()) ]
 
+    # task 3.e Look upthe related Class Names of the class id’s (“H”, “M”, “L”), into a separate “Class Name” column
+    df = pd.merge(df, paramlist[3], left_on= 'Class', right_on= 'Class ID', how= 'inner')
+
+    # task 3.f Remove “Class” column, as we only need “Class ID” column instead
+    df = df.drop(['Class'], axis = 1)
+
+    # task 3.g translate headers based on the dictionary created from the lists coming from the columns of the parameter file
+    df.columns = pd.Series(df.columns).replace(dict(zip(paramlist_filt[4]['Old header'].tolist(), paramlist_filt[4]['New header'].tolist())))
     icecream.ic(df)
-    pass
 
-
-# task 2 Loop through the input files of the input folder, use your “Read_csv.ipynb” external program to read all of them, and append them into 1 dataframe.
-# create an empty list for the series of dataframes read
-df_list = []
-
-# loop through all files indicated in thein the inputfolder
-for inputfile in os.listdir(basepath + '\\' + inputfolder):
-    # read the file to df_one dataframe
-    df_one = pu.read_csv(basepath, inputfolder, inputfile)
-    # append it to the list of dataframes
-    df_list.append(df_one)
-
-# concatenate the dataframes
-df = pd.concat(df_list)
-
-# print progress message
-print('Input files read.')
-
-# task 4 Run this “Clean_order_data.ipynb” external program to clean the dataframe
-# clean the dataframe using the code based on Week 2 Homework 2
-df = pu.clean_order_data(df)
-
-# task 6 Filter the dataframe on only the rows with the Sizes and Countries in the parameter file
-# df = df[df['Size'].isin(paramlist[0]['Size'].tolist())]
-# df = df[df['Country'].isin(paramlist[1]['Country'].tolist())]
-# a more general solution suggested by Szabolcs
-filter_column_list = ['Size', 'Country']
-for i in range( len(paramlist) ):
-    for filter_column in filter_column_list:
-        if filter_column in paramlist[i].columns:
-            # filter column to values which are among the values in the appropriated column of the paramlist
-            df = df[ df[filter_column].isin(paramlist[i][filter_column].tolist()) ]
-
-
-# check if the filtering was successful or not
-#print(df['Size'].unique())
-#print(df['Country'].unique())
-
-# task 7 Look up the related Class Names of the class id’s (“H”, “M”, “L”) from the parameter file, into a separate “Class Name” column in the dataframe.
-df = pd.merge(df, paramlist[2], left_on= 'Class', right_on= 'Class ID', how= 'inner')
-
-# task 8 Remove “Class” column, as we only need “Class ID” column instead (to make it easy to distinguish it from Class Name)
-df = df.drop(['Class'], axis = 1)
-
-# task 9 Use your “Export_to_csv.ipynb” external program to export the cleaned, filtered dataframe to the output folder (“Output”),
-# the output file’s name should be: “Orders_all_periods_cleaned_filtered.csv”
-pu.export_to_csv(basepath, outputfolder, 'Orders_all_periods_cleaned_filtered.csv', df)
+    # task 3.h and 3.i The output folder should be a “2011” / “2012” / “2013” / “2014” subfolder inside the “Output” folder
+    # (based on input file’s name), the program should create these folders (if they do not exist) Use your “Export_to_csv.ipynb”
+    # external program to export the cleaned, filtered, translated dataframe to the output folder, the output file’s name should be
+    # the same as the input file, but with a “_cleaned_filtered_translated.csv” ending
+    pu.export_to_csv(basepath, outputfolder, 'Orders_all_periods_cleaned_filtered.csv', df)
 
 # task 6 At the end, write out the runtime, and a beep sound and a final printed message should notify the user.
 endtime = time.time()

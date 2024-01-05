@@ -45,6 +45,8 @@ def clean_order_data(df):
     df[['Product_name', 'Size']] = df['ProductName'].str.split(', ', expand = True)
     # we do not need the original, uncleaned ProductName column
     df = df.drop(['ProductName'], axis = 1)
+    # in homework 5 the 'ProductName' column is needed, change the name back to it
+    df.rename(columns={'Product_name': 'ProductName'}, inplace=True)
     # replace the 'Black', 'Red' and 'Blue' "sizes" with '-'
     pattern = r'\b(?:Black|Red|Blue)\b'
     df['Size'] = df['Size'].str.replace(pattern, '-', regex = True)
