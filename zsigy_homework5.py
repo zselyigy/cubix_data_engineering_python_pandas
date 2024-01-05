@@ -5,7 +5,8 @@
 
 # import modules
 import pandas_utility_functions as pu       # Module of utility functions used instead of direct execution of py files.
-import pandas as pd, os, winsound, time, icecream
+import pandas as pd, os, winsound, time
+from icecream import ic                     # a nice library for the replacement of print and more
 
 # store the starttime
 starttime = time.time()
@@ -25,10 +26,9 @@ paramlist = []
 # read the parameter file
 paramlist = pu.read_parameters(paramfolderpath, paramfile, paramfile_sheet, usedcolumnlist)
 
-# task 3 The input folder pathsof the input files are in the 1stparameter table
-dfp_folders = paramlist[0]
+# task 3 The input folder paths of the input files are in the 1st parameter table
 # loop through the rows of this table to do the following subtasks on each input file
-for row_index, data in dfp_folders.iterrows():
+for row_index, data in paramlist[0].iterrows():
     inputfolder = data['Input folder path']
     inputfile = data['Input file']
 
@@ -42,7 +42,7 @@ for row_index, data in dfp_folders.iterrows():
             paramlist_filt.append(df2)
         else:
             paramlist_filt.append(myparamtable)     # this case we append the input file independent table
-    icecream.ic(paramlist_filt)                     # check if the parameter table filtering works well
+    # ic(paramlist_filt)                     # check if the parameter table filtering works well
 
     # task 3.b Read the input file from its input folder path
     inputfolder = inputfolder[inputfolder.find('Input') : ]    # I work with relative paths, so the paths in the parameter file had to be cut.
@@ -53,9 +53,9 @@ for row_index, data in dfp_folders.iterrows():
     # task 2 As the “Size” data in the 1st parameter table can be numeric and text values mixed,
     # convert “Size” column to STRING data type (otherwise only the texts will be matched, e.g. “XL”).
     paramlist_filt[1]['Size'] = paramlist_filt[1]['Size'].astype(str)
-#    icecream.ic(paramlist_filt[1]['Size'])
+#    ic(paramlist_filt[1]['Size'])
     df['Size'] = df['Size'].astype(str)
-#    icecream.ic( df['Size'])
+#    ic( df['Size'])
 
     # task 3.d Filter it on only the rows with the Sizes and Countries specified for the input file
     # Special thanks to Szabolcs for suggesting a more general solution.
@@ -74,13 +74,13 @@ for row_index, data in dfp_folders.iterrows():
 
     # task 3.g translate headers based on the dictionary created from the lists coming from the columns of the parameter file
     df.columns = pd.Series(df.columns).replace(dict(zip(paramlist_filt[4]['Old header'].tolist(), paramlist_filt[4]['New header'].tolist())))
-    icecream.ic(df)
+    # ic(df)
 
     # task 3.h and 3.i The output folder should be a “2011” / “2012” / “2013” / “2014” subfolder inside the “Output” folder
     # (based on input file’s name), the program should create these folders (if they do not exist) Use your “Export_to_csv.ipynb”
     # external program to export the cleaned, filtered, translated dataframe to the output folder, the output file’s name should be
     # the same as the input file, but with a “_cleaned_filtered_translated.csv” ending
-    pu.export_to_csv(basepath, outputfolder, 'Orders_all_periods_cleaned_filtered.csv', df)
+    pu.export_to_csv(basepath, outputfolder + '\\' + inputfolder[-4 : ], inputfile[ : -4] + '_cleaned_filtered_translated.csv', df)
 
 # task 6 At the end, write out the runtime, and a beep sound and a final printed message should notify the user.
 endtime = time.time()
