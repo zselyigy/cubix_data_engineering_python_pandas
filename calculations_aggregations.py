@@ -47,7 +47,7 @@ df = pu.read_csv(basepath, inputfolder, inputfile)
 # merge the two dataframes
 df = pd.merge(df, paramlist[0], left_on='Product', right_on='Product name', how= 'left')
 # calculate the sold quantity
-df['Sold quantuty'] = df['Revenue'] / df['Unit price']
+df['Sold quantity'] = df['Revenue'] / df['Unit price']
 
 # find missing values in a column
 # find the rows where the 'Product name' is missing and put the corresponding value from the 'Product' column to the list
@@ -61,6 +61,24 @@ missingprices = list(df.loc[df['Unit price'].isnull(), 'Product'])
 # remove the duplicates
 missingprices = list(dict.fromkeys(missingprices))
 print('Missing unit prices:', missingprices)
+
+# aggregate functions for column values
+average_qty = df['Sold quantity'].mean()
+min_qty = df['Sold quantity'].min()
+max_qty = df['Sold quantity'].max()
+count_qty = df['Sold quantity'].count()
+sum_qty = df['Sold quantity'].sum()
+
+print(average_qty, min_qty, max_qty, count_qty, sum_qty)
+
+# aggregate functions for column values
+average_rev = df['Revenue'].mean()
+min_rev = df['Revenue'].min()
+max_rev = df['Revenue'].max()
+count_rev = df['Revenue'].count()
+sum_rev = df['Revenue'].sum()
+
+print(average_rev, min_rev, max_rev, count_rev, sum_rev)
 
 ## final section - notification sound, runtime, final message to user
 # beep
