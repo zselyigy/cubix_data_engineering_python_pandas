@@ -86,6 +86,13 @@ df['Dummy total'] = df[columnlist].sum(axis= 1)
 df['Dummy average'] = df[columnlist].mean(axis= 1)
 # delete the two new columns since they are just for practicing purposes + the 'Product name'
 df = df.drop(['Dummy total', 'Dummy average', 'Product name'], axis= 1)
+
+# calculate ranges for column values
+# insert a new column
+df['Sold quantity range'] = df['Product']
+# change the values in this new column to the desired ones
+df.loc[df['Sold quantity'] >= average_qty, 'Sold qunatity range'] = 'Above average'
+df.loc[df['Sold quantity'] < average_qty, 'Sold qunatity range'] = 'Belos average'
 print(df)
 
 ## final section - notification sound, runtime, final message to user
