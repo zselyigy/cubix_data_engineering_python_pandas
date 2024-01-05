@@ -48,7 +48,19 @@ df = pu.read_csv(basepath, inputfolder, inputfile)
 df = pd.merge(df, paramlist[0], left_on='Product', right_on='Product name', how= 'left')
 # calculate the sold quantity
 df['Sold quantuty'] = df['Revenue'] / df['Unit price']
-print(df)
+
+# find missing values in a column
+# find the rows where the 'Product name' is missing and put the corresponding value from the 'Product' column to the list
+missingproducts = list(df.loc[df['Product name'].isnull(), 'Product'])
+# remove the duplicates
+missingproducts = list(dict.fromkeys(missingproducts))
+print('Missing products:', missingproducts)
+
+# find the rows where the 'Unit price' is missing and put the corresponding value from the 'Product' column to the list
+missingprices = list(df.loc[df['Unit price'].isnull(), 'Product'])
+# remove the duplicates
+missingprices = list(dict.fromkeys(missingprices))
+print('Missing unit prices:', missingprices)
 
 ## final section - notification sound, runtime, final message to user
 # beep
