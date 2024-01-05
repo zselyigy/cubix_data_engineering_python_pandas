@@ -9,7 +9,9 @@ The aim is to demonstrate the knowledge about filtering / translating tasks usin
 The following tasks are performed by the program, denoted in comments in the source code:
 
 1. Use your “Read_parameters.ipynb” external program to read the parameter tables from “Parameters_Homework5.xlsx” (-> paramlist).
+
 2. As the “Size” data in the 1st parameter table can be numeric and text values mixed, convert “Size” column to STRING data type (otherwise only the texts will be matched, e.g. “XL”).
+
 3. The input folder pathsof the input files are in the 1stparameter table, loop through the rows of this table to do the following subtasks on each input file(put commentsin the program for each subtasks to explain them to the user):
 
     a. Filter the parameter dataframes to input file (paramlist -> paramlist_filt).
