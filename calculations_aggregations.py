@@ -80,6 +80,14 @@ sum_rev = df['Revenue'].sum()
 
 print(average_rev, min_rev, max_rev, count_rev, sum_rev)
 
+# aggregating for rows
+columnlist = ['Revenue', 'Unit price', 'Sold quantity']
+df['Dummy total'] = df[columnlist].sum(axis= 1)
+df['Dummy average'] = df[columnlist].mean(axis= 1)
+# delete the two new columns since they are just for practicing purposes + the 'Product name'
+df = df.drop(['Dummy total', 'Dummy average', 'Product name'], axis= 1)
+print(df)
+
 ## final section - notification sound, runtime, final message to user
 # beep
 frequency = 440  # in Hz
