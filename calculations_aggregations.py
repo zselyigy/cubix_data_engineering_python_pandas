@@ -101,7 +101,16 @@ import numpy as np
 pivot_sum_rev = pd.pivot_table(df, values= 'Revenue', index= ['Customer'], columns= ['Product'], aggfunc= np.sum, fill_value= 0)
 print(pivot_sum_rev)
 
+# create a stacked column chart
+import matplotlib.pyplot as plt
+pivot_sum_rev.plot(kind= 'bar', stacked= True)
+pivot_sum_rev.plot(kind= 'barh', stacked= True)
+plt.show()
 
+# crate another pivot table
+pivot_sum_rev2 = pd.pivot_table(df, values= 'Revenue', index= ['Product'], aggfunc= np.sum)
+pivot_sum_rev2.plot(kind= 'line', figsize= (15, 5))
+plt.show()
 
 ## final section - notification sound, runtime, final message to user
 # beep
@@ -114,4 +123,4 @@ endtime = time.time()
 # print runtime
 print(runtime(starttime, endtime))
 
-print('All source files cleaned, filtered, and exported!')
+print('All source file analyzed!')
