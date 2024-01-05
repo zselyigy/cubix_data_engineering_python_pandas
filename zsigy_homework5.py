@@ -6,7 +6,7 @@
 # import modules
 import pandas_utility_functions as pu       # Module of utility functions used instead of direct execution of py files.
 import pandas as pd, os, winsound, time
-from icecream import ic                     # a nice library for the replacement of print and more
+from icecream import ic                     # a nice library for the replacement of print() for debugging and more
 import matplotlib.pyplot as plt, numpy as np
 
 # store the starttime
@@ -16,14 +16,13 @@ starttime = time.time()
 basepath = r'.\Python_DA\Homework5'
 outputfolder = 'Output'
 
-# task 1 Read the parameter tables from “Parameters_Homework5.xlsx”
+# task 1 Use your “Read_parameters.ipynb” external program to read the parameter tables from “Parameters_Homework5.xlsx” (-> paramlist)
 # parameter related data
 paramfolderpath = r'.\Python_DA\Homework5'
 paramfile = 'Parameters_Homework5.xlsx'
 paramfile_sheet = 'Parameter tables'
 usedcolumnlist = ['A:B', 'D:E', 'G:H', 'J:K', 'M:O']
 paramlist = []
-
 # read the parameter file
 paramlist = pu.read_parameters(paramfolderpath, paramfile, paramfile_sheet, usedcolumnlist)
 
@@ -36,27 +35,28 @@ for row_index, data in paramlist[0].iterrows():
     # task 3.a Filter the parameter dataframes to input file (paramlist -> paramlist_filt).
     paramlist_filt = []
     for myparamtable in paramlist:
-        if 'Input file' in myparamtable.columns:        # we filter only the rows corresponds to out current input file
+        if 'Input file' in myparamtable.columns:        # we filter only the rows corresponds to our current input file
             df = myparamtable
             df2 = df[ df['Input file'] == inputfile]    # keep only the appropriate rows
             df2 = df2.reset_index(drop = True)          # reset the index after filtering
             paramlist_filt.append(df2)
         else:
-            paramlist_filt.append(myparamtable)     # this case we append the input file independent table
-    # ic(paramlist_filt)                     # check if the parameter table filtering works well
+            paramlist_filt.append(myparamtable)         # this case we append the input file independent table
+    # ic(paramlist_filt)                                # check if the parameter table filtering works well
 
     # task 3.b Read the input file from its input folder path
-    inputfolder = inputfolder[inputfolder.find('Input') : ]    # I work with relative paths, so the paths in the parameter file had to be cut.
+    inputfolder = inputfolder[inputfolder.find('Input') : ]    # I work with relative paths, so the paths in the parameter file had to be truncated.
     df = pu.read_csv(basepath, inputfolder, inputfile)
 
     # task 3.c Use the “Clean_order_data.ipynb” external program to clean it
     df = pu.clean_order_data(df)
+
     # task 2 As the “Size” data in the 1st parameter table can be numeric and text values mixed,
     # convert “Size” column to STRING data type (otherwise only the texts will be matched, e.g. “XL”).
     paramlist_filt[1]['Size'] = paramlist_filt[1]['Size'].astype(str)
 #    ic(paramlist_filt[1]['Size'])
     df['Size'] = df['Size'].astype(str)
-#    ic( df['Size'])
+#    ic(df['Size'])
 
     # task 3.d Filter it on only the rows with the Sizes and Countries specified for the input file
     # Special thanks to Szabolcs for suggesting a more general solution.
@@ -64,10 +64,10 @@ for row_index, data in paramlist[0].iterrows():
     for i in range( len(paramlist_filt) ):
         for filter_column in filter_column_list:
             if filter_column in paramlist[i].columns:
-                # filter column to values which are among the values in the appropriated column of the paramlist
+                # filter column to values which are among the values of the appropriated column of the paramlist
                 df = df[ df[filter_column].isin(paramlist_filt[i][filter_column].tolist()) ]
 
-    # task 3.e Look upthe related Class Names of the class id’s (“H”, “M”, “L”), into a separate “Class Name” column
+    # task 3.e Look up the related Class Names of the class id’s (“H”, “M”, “L”), into a separate “Class Name” column
     df = pd.merge(df, paramlist[3], left_on= 'Class', right_on= 'Class ID', how= 'inner')
 
     # task 3.f Remove “Class” column, as we only need “Class ID” column instead
@@ -87,7 +87,7 @@ for row_index, data in paramlist[0].iterrows():
 df_for_pivottable_and_plotting = pu.read_csv(basepath, outputfolder + r'\2011', 'Orders_2011_cleaned_filtered_translated.csv')
 # ic(df_for_pivottable_and_plotting)
 
-# task 4.a Create a Pivot Tableon it, Rows: “Size”, Columns: “Class Name”, Values: “Revenue”, and write it out in cell output
+# task 4.a Create a Pivot Table on it, Rows: “Size”, Columns: “Class Name”, Values: “Revenue”, and write it out in cell output
 pivot_sum_rev = pd.pivot_table(df_for_pivottable_and_plotting, values= 'Revenue', index= ['Size'], columns= ['Class Name'], aggfunc= np.sum, fill_value= 0)
 ic(pivot_sum_rev)
 
@@ -104,5 +104,5 @@ duration = 500  # in ms
 winsound.Beep(frequency, duration)
 print('All tasks are finished in week 5 Homework 5.')
 
-# task 4.b figure is shown only at the end not to count in the runtime, but keep alive as long as the user wants
+# task 4.b Figure is only shown at the end, not to count the time the user spends looking at it in the runtime, but to keep alive as long as the user wants.
 plt.show()

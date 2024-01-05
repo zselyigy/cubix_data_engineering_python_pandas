@@ -4,7 +4,7 @@ Created by István Gy. Zsély, version 0.1
 # Project overview
 This code was created during my participation in the [CUBIX Data Engineering course](https://courses.cubixedu.com/kepzes/data-engineer-23q4).
 
-The aim is to demonstrate the knowledge about filtering / translating tasks using the Pandas library on multiple files and plotting pivot tables.
+The aim is to demonstrate the knowledge about filtering / translating tasks using the Pandas library on multiple files and creating / plotting pivot tables.
 
 The following tasks are performed by the program, denoted in comments in the source code:
 
